@@ -12,6 +12,14 @@ architecture Behavioral of program_counter is
 
 begin
 
+process(clk,reset) begin
+if(clk'event and clk = '1') then
+	if(reset = '1') then 
+	output <= address;
+	end if;
+end if;
+end process;
+
 
 end Behavioral;
 
