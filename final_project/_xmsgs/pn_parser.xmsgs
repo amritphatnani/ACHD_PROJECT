@@ -11,14 +11,5 @@
 <msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/amrit/Documents/GitHub/ACHD_PROJECT/final_project/ALU.vhd&quot; into library work</arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/amrit/Documents/GitHub/ACHD_PROJECT/final_project/ALUCtrl.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/amrit/Documents/GitHub/ACHD_PROJECT/final_project/ControlUnit.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/amrit/Documents/GitHub/ACHD_PROJECT/final_project/program_counter.vhd&quot; into library work</arg>
-</msg>
-
 </messages>
 

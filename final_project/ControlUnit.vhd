@@ -31,7 +31,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity ControlUnit is
     Port ( opcode : in  STD_LOGIC_VECTOR (5 downto 0);
-				ALUOP: out STD_LOGIC_VECTOR (1 downto 0);
+				ALUOP: out STD_LOGIC_VECTOR (2 downto 0);
 				RegDst: out STD_LOGIC;
 				Branch : out STD_LOGIC;
 				MemRead: out std_logic;
@@ -40,13 +40,12 @@ entity ControlUnit is
 				AluSrc: out std_logic;
 				RegWrite: out std_logic;
 				Jump: out std_logic;
-				--BranchNE: out std_logic;
-				--BranchLT: out std_logic;
+				
 				Halt: out std_logic);
 end ControlUnit;
 
 architecture Behavioral of ControlUnit is
-signal Rtype,ORI, ANDI, SUBI, ADDI, BNE, BEQ, BLT, LW, SW, Itype, SHL,SHR,brn: std_logic;
+signal Rtype,ORI, ANDI, SUBI, ADDI, BNE, BEQ, BLT, LW, SW, Itype, SHL, SHR, BRN: std_logic;
 begin
 
 Rtype <= '1' when opcode = "000000" else '0';
@@ -66,7 +65,7 @@ Halt <= '1' when opcode = "111111" else '0';
 
 Itype <= ADDI or SUBI or ORI or ANDI or SHL or SHR;
 Branch <= brn;
-brn <= BEQ or BLT or BNE;
+BRN <= BEQ or BNE;
 ALUSrc <= LW or SW or Itype;
 MemRead <= LW;
 MemWrite <= SW;
@@ -74,12 +73,23 @@ RegWrite <= Rtype or LW or Itype;
 RegDst <= Rtype;
 MemtoReg <= LW;
 
-process(rtype,itype,brn) begin 
-if (Itype ='1') then 
-ALUOP <= "00";
-else
-ALUOP(1) <= Rtype;
-ALUOP(0) <= brn;
+process(rtype,itype,brn,blt) begin 
+if(SW ='1' or LW = '1') then
+Aluop <= "000";
+elsif(Rtype ='1') then
+ALUop <= "010";
+elsif(BRN ='1') then
+ALUop <= "001";
+elsif(BLT = '1') then
+ALUop <= "011";
+elsif(ADDI = '1') then
+ALUop <= "100";
+elsif(SUBI = '1') then
+ALUop <= "101";
+elsif(ANDI = '1') then
+ALUop <= "110";
+elsif(ORI = '1') then
+ALUop <= "111";
 end if;
 end process;
 

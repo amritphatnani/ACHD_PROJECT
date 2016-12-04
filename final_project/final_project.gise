@@ -45,6 +45,10 @@
     <transform xil_pn:end_ts="1480814481" xil_pn:in_ck="417156605686928209" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1480814481">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ALU.vhd"/>
       <outfile xil_pn:name="ALUCtrl.vhd"/>
       <outfile xil_pn:name="ControlUnit.vhd"/>
@@ -65,6 +69,11 @@
     <transform xil_pn:end_ts="1480814489" xil_pn:in_ck="417156605686928209" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1480814488">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ALU.vhd"/>
       <outfile xil_pn:name="ALUCtrl.vhd"/>
       <outfile xil_pn:name="ControlUnit.vhd"/>
@@ -73,6 +82,10 @@
     <transform xil_pn:end_ts="1480814492" xil_pn:in_ck="417156605686928209" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-5659784023033601012" xil_pn:start_ts="1480814489">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="ControlUnit_beh.prj"/>
       <outfile xil_pn:name="ControlUnit_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
@@ -82,6 +95,10 @@
     <transform xil_pn:end_ts="1480814493" xil_pn:in_ck="6090895280589730736" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="411444581762752473" xil_pn:start_ts="1480814492">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ControlUnit_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
     </transform>

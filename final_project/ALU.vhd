@@ -44,16 +44,31 @@ signal ALUOutput : str_logic_vector(31 downto 0);
 
 begin
 
-readData1 <= Data1;
-readData2 <= Data2;
-
 Zero <= '1' when (ALUOutput = X"00000000") else '0';
-ALUResult <= (X"000000" & "000" & ALUOutput(31)) when ALUCtr = "111" else
-					ALUOutput;
+--ALUResult <= (X"000000" & "000" & ALUOutput(31)) when ALUCtr = "111" else
+	--				ALUOutput;
 			
 process(ALUCtr, readData1, readData2)
 begin
-		
+	case ALUCtr is
+			when "000" => ALUOutput <= Data1 + Data2;
+			when "001" => ALUOutput <= Data1 + (not Data2) + 1;
+			when "010" => ALUOutput <= Data1 and Data2;
+			when "011" => ALUOutput <= Data1 or Data2;
+			when "100" => ALUOutput <= Data1 nor Data2;
+			when "101" => 
+							if((Data1 - data2) < 0) then 
+								Zero <= '0';
+								ALUOuput <= X"UUUUUUUU";
+								else
+								ALUOuput <= X"UUUUUUUU";
+								end if;
+								
+			
+			when other => ALUOutput <= X"UUUUUUUU";
+			
+			end case;
 end process;		
+
 end Behavioral;
 
