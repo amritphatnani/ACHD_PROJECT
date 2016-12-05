@@ -1,0 +1,272 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 1
+-n 3 -fastpaths -xml memInstructrion.twx memInstructrion.ncd -o
+memInstructrion.twr memInstructrion.pcf
+
+Design file:              memInstructrion.ncd
+Physical constraint file: memInstructrion.pcf
+Device,package,speed:     xc7a100t,csg324,C,-1 (PRODUCTION 1.10 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+addr<0>        |instrct<0>     |    8.451|
+addr<0>        |instrct<1>     |    8.856|
+addr<0>        |instrct<2>     |    6.605|
+addr<0>        |instrct<4>     |    8.884|
+addr<0>        |instrct<5>     |    9.315|
+addr<0>        |instrct<6>     |    8.908|
+addr<0>        |instrct<7>     |    9.139|
+addr<0>        |instrct<8>     |    9.217|
+addr<0>        |instrct<9>     |    9.364|
+addr<0>        |instrct<10>    |    9.198|
+addr<0>        |instrct<11>    |    8.555|
+addr<0>        |instrct<12>    |    8.652|
+addr<0>        |instrct<13>    |    8.259|
+addr<0>        |instrct<14>    |    9.171|
+addr<0>        |instrct<15>    |    9.299|
+addr<0>        |instrct<16>    |    8.495|
+addr<0>        |instrct<17>    |    8.158|
+addr<0>        |instrct<19>    |    8.444|
+addr<0>        |instrct<21>    |    8.439|
+addr<0>        |instrct<22>    |    8.505|
+addr<0>        |instrct<24>    |    8.099|
+addr<0>        |instrct<26>    |    7.782|
+addr<0>        |instrct<27>    |    8.554|
+addr<0>        |instrct<28>    |    9.134|
+addr<0>        |instrct<29>    |    8.576|
+addr<0>        |instrct<31>    |    8.416|
+addr<1>        |instrct<0>     |    8.009|
+addr<1>        |instrct<1>     |    8.703|
+addr<1>        |instrct<3>     |    8.144|
+addr<1>        |instrct<4>     |    8.340|
+addr<1>        |instrct<5>     |    8.739|
+addr<1>        |instrct<6>     |    8.364|
+addr<1>        |instrct<7>     |    8.595|
+addr<1>        |instrct<8>     |    8.673|
+addr<1>        |instrct<9>     |    8.820|
+addr<1>        |instrct<10>    |    8.654|
+addr<1>        |instrct<11>    |    8.134|
+addr<1>        |instrct<12>    |    8.499|
+addr<1>        |instrct<13>    |    7.838|
+addr<1>        |instrct<14>    |    8.595|
+addr<1>        |instrct<15>    |    8.755|
+addr<1>        |instrct<16>    |    8.035|
+addr<1>        |instrct<17>    |    7.697|
+addr<1>        |instrct<18>    |    7.784|
+addr<1>        |instrct<19>    |    8.291|
+addr<1>        |instrct<21>    |    7.998|
+addr<1>        |instrct<22>    |    8.616|
+addr<1>        |instrct<24>    |    8.173|
+addr<1>        |instrct<26>    |    8.551|
+addr<1>        |instrct<27>    |    8.570|
+addr<1>        |instrct<28>    |    8.590|
+addr<1>        |instrct<29>    |    8.000|
+addr<1>        |instrct<31>    |    8.432|
+addr<2>        |instrct<0>     |    8.080|
+addr<2>        |instrct<1>     |    8.703|
+addr<2>        |instrct<2>     |    6.854|
+addr<2>        |instrct<3>     |    8.441|
+addr<2>        |instrct<4>     |    8.768|
+addr<2>        |instrct<5>     |    9.200|
+addr<2>        |instrct<6>     |    8.792|
+addr<2>        |instrct<7>     |    9.023|
+addr<2>        |instrct<8>     |    9.101|
+addr<2>        |instrct<9>     |    9.248|
+addr<2>        |instrct<10>    |    9.082|
+addr<2>        |instrct<11>    |    8.678|
+addr<2>        |instrct<12>    |    8.531|
+addr<2>        |instrct<13>    |    8.381|
+addr<2>        |instrct<14>    |    9.056|
+addr<2>        |instrct<15>    |    9.183|
+addr<2>        |instrct<16>    |    8.183|
+addr<2>        |instrct<17>    |    7.845|
+addr<2>        |instrct<18>    |    8.080|
+addr<2>        |instrct<19>    |    8.291|
+addr<2>        |instrct<21>    |    8.069|
+addr<2>        |instrct<22>    |    8.888|
+addr<2>        |instrct<24>    |    8.451|
+addr<2>        |instrct<26>    |    8.440|
+addr<2>        |instrct<27>    |    8.492|
+addr<2>        |instrct<28>    |    9.018|
+addr<2>        |instrct<29>    |    8.461|
+addr<2>        |instrct<31>    |    8.354|
+addr<3>        |instrct<0>     |    7.743|
+addr<3>        |instrct<1>     |    7.003|
+addr<3>        |instrct<3>     |    7.310|
+addr<3>        |instrct<4>     |    7.350|
+addr<3>        |instrct<5>     |    7.813|
+addr<3>        |instrct<6>     |    7.374|
+addr<3>        |instrct<7>     |    7.605|
+addr<3>        |instrct<8>     |    7.683|
+addr<3>        |instrct<9>     |    7.830|
+addr<3>        |instrct<10>    |    7.664|
+addr<3>        |instrct<11>    |    7.055|
+addr<3>        |instrct<12>    |    7.189|
+addr<3>        |instrct<13>    |    7.430|
+addr<3>        |instrct<14>    |    7.669|
+addr<3>        |instrct<15>    |    7.765|
+addr<3>        |instrct<16>    |    7.900|
+addr<3>        |instrct<17>    |    7.596|
+addr<3>        |instrct<18>    |    6.848|
+addr<3>        |instrct<19>    |    7.749|
+addr<3>        |instrct<21>    |    7.764|
+addr<3>        |instrct<22>    |    8.598|
+addr<3>        |instrct<24>    |    8.154|
+addr<3>        |instrct<26>    |    8.378|
+addr<3>        |instrct<27>    |    8.398|
+addr<3>        |instrct<28>    |    7.600|
+addr<3>        |instrct<29>    |    7.554|
+addr<3>        |instrct<31>    |    8.260|
+addr<4>        |instrct<0>     |    7.356|
+addr<4>        |instrct<1>     |    7.083|
+addr<4>        |instrct<2>     |    6.816|
+addr<4>        |instrct<3>     |    7.496|
+addr<4>        |instrct<4>     |    7.594|
+addr<4>        |instrct<5>     |    7.801|
+addr<4>        |instrct<6>     |    7.618|
+addr<4>        |instrct<7>     |    7.849|
+addr<4>        |instrct<8>     |    7.927|
+addr<4>        |instrct<9>     |    8.074|
+addr<4>        |instrct<10>    |    7.908|
+addr<4>        |instrct<11>    |    7.737|
+addr<4>        |instrct<12>    |    7.820|
+addr<4>        |instrct<13>    |    7.668|
+addr<4>        |instrct<14>    |    7.657|
+addr<4>        |instrct<15>    |    8.009|
+addr<4>        |instrct<16>    |    7.366|
+addr<4>        |instrct<17>    |    7.691|
+addr<4>        |instrct<18>    |    7.373|
+addr<4>        |instrct<19>    |    7.511|
+addr<4>        |instrct<21>    |    7.572|
+addr<4>        |instrct<22>    |    7.914|
+addr<4>        |instrct<24>    |    7.751|
+addr<4>        |instrct<26>    |    7.933|
+addr<4>        |instrct<27>    |    8.190|
+addr<4>        |instrct<28>    |    7.844|
+addr<4>        |instrct<29>    |    7.819|
+addr<4>        |instrct<31>    |    8.052|
+addr<5>        |instrct<0>     |    7.531|
+addr<5>        |instrct<1>     |    6.961|
+addr<5>        |instrct<2>     |    6.434|
+addr<5>        |instrct<3>     |    7.277|
+addr<5>        |instrct<4>     |    8.143|
+addr<5>        |instrct<5>     |    8.129|
+addr<5>        |instrct<6>     |    8.167|
+addr<5>        |instrct<7>     |    8.398|
+addr<5>        |instrct<8>     |    8.476|
+addr<5>        |instrct<9>     |    8.623|
+addr<5>        |instrct<10>    |    8.457|
+addr<5>        |instrct<11>    |    7.396|
+addr<5>        |instrct<12>    |    7.843|
+addr<5>        |instrct<13>    |    7.882|
+addr<5>        |instrct<14>    |    7.985|
+addr<5>        |instrct<15>    |    8.558|
+addr<5>        |instrct<16>    |    8.089|
+addr<5>        |instrct<17>    |    7.928|
+addr<5>        |instrct<18>    |    7.722|
+addr<5>        |instrct<19>    |    7.786|
+addr<5>        |instrct<21>    |    7.923|
+addr<5>        |instrct<22>    |    7.625|
+addr<5>        |instrct<24>    |    7.614|
+addr<5>        |instrct<26>    |    7.577|
+addr<5>        |instrct<27>    |    8.402|
+addr<5>        |instrct<28>    |    8.393|
+addr<5>        |instrct<29>    |    8.256|
+addr<5>        |instrct<31>    |    8.264|
+addr<6>        |instrct<0>     |    6.902|
+addr<6>        |instrct<1>     |    7.033|
+addr<6>        |instrct<2>     |    6.512|
+addr<6>        |instrct<3>     |    7.260|
+addr<6>        |instrct<4>     |    7.043|
+addr<6>        |instrct<5>     |    7.213|
+addr<6>        |instrct<6>     |    7.067|
+addr<6>        |instrct<7>     |    7.298|
+addr<6>        |instrct<8>     |    7.376|
+addr<6>        |instrct<9>     |    7.523|
+addr<6>        |instrct<10>    |    7.357|
+addr<6>        |instrct<11>    |    7.353|
+addr<6>        |instrct<12>    |    7.108|
+addr<6>        |instrct<13>    |    7.640|
+addr<6>        |instrct<14>    |    7.069|
+addr<6>        |instrct<15>    |    7.458|
+addr<6>        |instrct<16>    |    7.034|
+addr<6>        |instrct<17>    |    6.814|
+addr<6>        |instrct<18>    |    7.385|
+addr<6>        |instrct<19>    |    7.336|
+addr<6>        |instrct<21>    |    7.816|
+addr<6>        |instrct<22>    |    7.547|
+addr<6>        |instrct<24>    |    7.477|
+addr<6>        |instrct<26>    |    7.227|
+addr<6>        |instrct<27>    |    7.930|
+addr<6>        |instrct<28>    |    7.293|
+addr<6>        |instrct<29>    |    7.379|
+addr<6>        |instrct<31>    |    7.792|
+addr<7>        |instrct<0>     |    7.511|
+addr<7>        |instrct<1>     |    7.352|
+addr<7>        |instrct<2>     |    6.493|
+addr<7>        |instrct<3>     |    7.516|
+addr<7>        |instrct<4>     |    8.572|
+addr<7>        |instrct<5>     |    8.123|
+addr<7>        |instrct<6>     |    8.596|
+addr<7>        |instrct<7>     |    8.827|
+addr<7>        |instrct<8>     |    8.905|
+addr<7>        |instrct<9>     |    9.052|
+addr<7>        |instrct<10>    |    8.886|
+addr<7>        |instrct<11>    |    8.063|
+addr<7>        |instrct<12>    |    8.145|
+addr<7>        |instrct<13>    |    7.659|
+addr<7>        |instrct<14>    |    7.979|
+addr<7>        |instrct<15>    |    8.987|
+addr<7>        |instrct<16>    |    8.123|
+addr<7>        |instrct<17>    |    7.664|
+addr<7>        |instrct<18>    |    8.248|
+addr<7>        |instrct<19>    |    8.165|
+addr<7>        |instrct<21>    |    7.764|
+addr<7>        |instrct<22>    |    7.948|
+addr<7>        |instrct<24>    |    8.170|
+addr<7>        |instrct<26>    |    8.256|
+addr<7>        |instrct<27>    |    8.174|
+addr<7>        |instrct<28>    |    8.822|
+addr<7>        |instrct<29>    |    7.533|
+addr<7>        |instrct<31>    |    8.036|
+---------------+---------------+---------+
+
+
+Analysis completed Sat Dec 03 13:02:52 2016 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 667 MB
+
+
+
