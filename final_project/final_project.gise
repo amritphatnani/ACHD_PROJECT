@@ -28,6 +28,9 @@
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ALUCtrl.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="ALUCtrl.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="ALUCtrl.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Adder.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Adder.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="Adder.xst"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ControlUnit.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="ControlUnit.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="ControlUnit.xst"/>

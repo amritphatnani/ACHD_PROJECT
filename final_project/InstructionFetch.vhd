@@ -60,6 +60,12 @@ Port( input1 : in std_logic_vector(31 downto 0);
 		output : out std_logic_vector(31 downto 0));
 end component;
 
+component Adder is
+Port (number1 : in std_logic_vector(31 downto 0);
+		number2 : in std_logic_vector(31 downto 0);
+		result : out std_logic_vector(31 downto 0));
+end component;
+
 begin
 
 
