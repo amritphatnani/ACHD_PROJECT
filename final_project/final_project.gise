@@ -48,6 +48,9 @@
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="signExt.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="signExt.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="signExt.xst"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
   </files>
@@ -93,7 +96,7 @@
     </transform>
     <transform xil_pn:end_ts="1480814492" xil_pn:in_ck="417156605686928209" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-5659784023033601012" xil_pn:start_ts="1480814489">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
@@ -104,7 +107,7 @@
     </transform>
     <transform xil_pn:end_ts="1480814493" xil_pn:in_ck="6090895280589730736" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="411444581762752473" xil_pn:start_ts="1480814492">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>

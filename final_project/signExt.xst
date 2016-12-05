@@ -1,10 +1,7 @@
-set -tmpdir "xst/projnav.tmp"
-set -xsthdpdir "xst"
-run
--ifn signExt.prj
--ofn signExt
--ofmt NGC
--p xc7a100t-1-csg324
+set -tmpdir "C:/Users/amrit/Documents/GitHub/ACHD_PROJECT/final_project/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/amrit/Documents/GitHub/ACHD_PROJECT/final_project/xst"
+run -compileonly yes
+-p xa7a100t-2I-csg324
 -top signExt
 -opt_mode Speed
 -opt_level 1
@@ -50,3 +47,4 @@ run
 -iob Auto
 -equivalent_register_removal YES
 -slice_utilization_ratio_maxmargin 5
+-ifn signExt.prj

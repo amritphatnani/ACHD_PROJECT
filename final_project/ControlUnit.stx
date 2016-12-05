@@ -10,7 +10,7 @@ Total CPU time to Xst completion: 0.08 secs
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Reading design: ControlUnit.prj
 
@@ -45,7 +45,7 @@ Parsing architecture <Behavioral> of entity <controlunit>.
 
 
 Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 5.31 secs
+Total CPU time to Xst completion: 5.27 secs
  
 --> 
 

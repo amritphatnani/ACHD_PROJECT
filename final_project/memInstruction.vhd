@@ -1,8 +1,26 @@
-library IEEE;
+----------------------------------------------------------------------------------
+-- Company: 
+-- Engineer: 
+-- 
+-- Create Date:    15:09:04 12/05/2016 
+-- Design Name: 
+-- Module Name:    memInstruction - Behavioral 
+-- Project Name: 
+-- Target Devices: 
+-- Tool versions: 
+-- Description: 
+--
+-- Dependencies: 
+--
+-- Revision: 
+-- Revision 0.01 - File Created
+-- Additional Comments: 
+--
+----------------------------------------------------------------------------------library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.All;
 
-entity memInstructrion is
+entity memInstruction is
 
 Port(
 		addr : in  STD_LOGIC_VECTOR (31 downto 0);
@@ -11,7 +29,7 @@ Port(
 
 end memInstructrion;
 
-architecture Behavioral of memInstructrion is
+architecture Behavioral of memInstruction is
 
 TYPE ram IS ARRAY (0 TO 255) OF STD_LOGIC_VECTOR(31 DOWNTO 0);
 
@@ -52,4 +70,5 @@ begin
 instrct <= instrctMem(CONV_INTEGER(addr(31 DOWNTO 0)));
 
 end Behavioral;
+
 
