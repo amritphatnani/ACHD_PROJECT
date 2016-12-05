@@ -42,19 +42,21 @@ process(aluop, funct)
 begin
 
 	case ALUop is 
-			when "000" => ALUctr <= "000"; --LW/SW
-			when "001" => ALUctr <= "001"; --BEQ/BNE
-			when "100" => ALuctr <= "000"; --ADDI
-			when "101" => ALUctr <= "001"; --SUBI
-			when "110" => ALUctr <= "010"; --ANDI
-			when "111" => ALUctr <= "011"; --ORI
-			when "011" => Aluctr <= "101"; --BLT
-			when "010" => 
+			when "0000" => ALUctr <= "000"; --LW/SW
+			when "0001" => ALUctr <= "001"; --BEQ/BNE
+			when "0100" => ALuctr <= "000"; --ADDI
+			when "0101" => ALUctr <= "001"; --SUBI
+			when "0110" => ALUctr <= "010"; --ANDI
+			when "0111" => ALUctr <= "011"; --ORI
+			when "0011" => Aluctr <= "101"; --BLT
+			when "1000" => Aluctr <= "110"; --SHL
+			when "1001" => ALUctr <= "111"; --SHR
+			when "0010" => 
 						case funct is
 								when "010000" => ALUctr <= "000"; --ADD
 								when "010001" => ALUctr <= "001"; --SUB
 								when "010010" => ALUctr <= "010"; --AND
-								when "010011" => ALUcrt <= "011"; --OR
+								when "010011" => ALUctr <= "011"; --OR
 								when "010100" => ALUctr <= "100"; --NOR
 								when others => ALuctr <= "UUU";
 								

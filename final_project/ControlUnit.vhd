@@ -75,21 +75,25 @@ MemtoReg <= LW;
 
 process(rtype,itype,brn,blt) begin 
 if(SW ='1' or LW = '1') then
-Aluop <= "000";
+Aluop <= "0000";
 elsif(Rtype ='1') then
-ALUop <= "010";
+ALUop <= "0010";
 elsif(BRN ='1') then
-ALUop <= "001";
+ALUop <= "0001";
 elsif(BLT = '1') then
-ALUop <= "011";
+ALUop <= "0011";
 elsif(ADDI = '1') then
-ALUop <= "100";
+ALUop <= "0100";
 elsif(SUBI = '1') then
-ALUop <= "101";
+ALUop <= "0101";
 elsif(ANDI = '1') then
-ALUop <= "110";
+ALUop <= "0110";
 elsif(ORI = '1') then
-ALUop <= "111";
+ALUop <= "0111";
+elsif(SHL = '1') then
+ALUop <= "1000";
+elsif(SHR = '1') then
+ALUop <= "1001";
 end if;
 end process;
 
