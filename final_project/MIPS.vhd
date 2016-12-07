@@ -119,6 +119,15 @@ component mux_2_1 is
            output : out  STD_LOGIC_VECTOR (31 downto 0));
 end component;
 
+--component mux_clk_2_1 is
+--    Port ( input1 : in  STD_LOGIC_VECTOR (31 downto 0);
+--           input2 : in  STD_LOGIC_VECTOR (31 downto 0);
+--           sel : in  STD_LOGIC;
+--           output : out  STD_LOGIC_VECTOR (31 downto 0);
+--			  clk: in STD_logic;
+--			  reset: in std_logic);
+--end component;
+
 component mux_5bits is
 Port ( input1 : in  STD_LOGIC_VECTOR (4 downto 0);
            input2 : in  STD_LOGIC_VECTOR (4 downto 0);

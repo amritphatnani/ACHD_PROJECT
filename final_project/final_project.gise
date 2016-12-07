@@ -83,11 +83,11 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1481089604" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1481089604">
+    <transform xil_pn:end_ts="1481145992" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1481145992">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1481089604" xil_pn:in_ck="-3284374998828862188" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1481089604">
+    <transform xil_pn:end_ts="1481151062" xil_pn:in_ck="-7778103134293982575" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1481151062">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ALU.vhd"/>
@@ -97,28 +97,28 @@
       <outfile xil_pn:name="InstructionFetch.vhd"/>
       <outfile xil_pn:name="MIPS.vhd"/>
       <outfile xil_pn:name="ShiftLeft2.vhd"/>
-      <outfile xil_pn:name="ShiftLeft2Jump.vhd"/>
       <outfile xil_pn:name="SignExt.vhd"/>
       <outfile xil_pn:name="dataMem.vhd"/>
       <outfile xil_pn:name="memInstruction.vhd"/>
       <outfile xil_pn:name="mux_2_1.vhd"/>
       <outfile xil_pn:name="mux_5bits.vhd"/>
+      <outfile xil_pn:name="mux_clk_2_1.vhd"/>
       <outfile xil_pn:name="program_counter.vhd"/>
       <outfile xil_pn:name="registerFile.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1481089604" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-337593359264824164" xil_pn:start_ts="1481089604">
+    <transform xil_pn:end_ts="1481150648" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-337593359264824164" xil_pn:start_ts="1481150648">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1481089604" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-2631150207642428216" xil_pn:start_ts="1481089604">
+    <transform xil_pn:end_ts="1481150648" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-2631150207642428216" xil_pn:start_ts="1481150648">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1481089604" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="1711786235569486537" xil_pn:start_ts="1481089604">
+    <transform xil_pn:end_ts="1481145992" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="1711786235569486537" xil_pn:start_ts="1481145992">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1481089604" xil_pn:in_ck="-3284374998828862188" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1481089604">
+    <transform xil_pn:end_ts="1481151062" xil_pn:in_ck="-7778103134293982575" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1481151062">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ALU.vhd"/>
@@ -128,20 +128,18 @@
       <outfile xil_pn:name="InstructionFetch.vhd"/>
       <outfile xil_pn:name="MIPS.vhd"/>
       <outfile xil_pn:name="ShiftLeft2.vhd"/>
-      <outfile xil_pn:name="ShiftLeft2Jump.vhd"/>
       <outfile xil_pn:name="SignExt.vhd"/>
       <outfile xil_pn:name="dataMem.vhd"/>
       <outfile xil_pn:name="memInstruction.vhd"/>
       <outfile xil_pn:name="mux_2_1.vhd"/>
       <outfile xil_pn:name="mux_5bits.vhd"/>
+      <outfile xil_pn:name="mux_clk_2_1.vhd"/>
       <outfile xil_pn:name="program_counter.vhd"/>
       <outfile xil_pn:name="registerFile.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1481089608" xil_pn:in_ck="-3284374998828862188" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-7114237924734007332" xil_pn:start_ts="1481089604">
+    <transform xil_pn:end_ts="1481151067" xil_pn:in_ck="-7778103134293982575" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-7114237924734007332" xil_pn:start_ts="1481151062">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="MIPS_beh.prj"/>
       <outfile xil_pn:name="MIPS_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
@@ -149,11 +147,9 @@
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1481089609" xil_pn:in_ck="8640871058544263325" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="5026938173584537481" xil_pn:start_ts="1481089608">
+    <transform xil_pn:end_ts="1481151067" xil_pn:in_ck="8640871058544263325" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="5026938173584537481" xil_pn:start_ts="1481151067">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="MIPS_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
@@ -192,20 +188,10 @@
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputRemoved"/>
-      <outfile xil_pn:name="InstructionFetch.ngr"/>
-      <outfile xil_pn:name="MIPS.lso"/>
-      <outfile xil_pn:name="MIPS.ngc"/>
-      <outfile xil_pn:name="MIPS.ngr"/>
-      <outfile xil_pn:name="MIPS.prj"/>
-      <outfile xil_pn:name="MIPS.stx"/>
-      <outfile xil_pn:name="MIPS.syr"/>
-      <outfile xil_pn:name="MIPS.xst"/>
-      <outfile xil_pn:name="MIPS_xst.xrpt"/>
-      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
-      <outfile xil_pn:name="webtalk_pn.xml"/>
-      <outfile xil_pn:name="xst"/>
     </transform>
   </transforms>
 

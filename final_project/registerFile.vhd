@@ -46,8 +46,8 @@ entity registerFile is
 end registerFile;
 
 architecture Behavioral of registerFile is
-signal register1: STD_LOGIC_VECTOR(31 downto 0);
-signal register2: STD_LOGIC_VECTOR(31 downto 0);
+--signal register1: STD_LOGIC_VECTOR(31 downto 0);
+--signal register2: STD_LOGIC_VECTOR(31 downto 0);
 
 type ARRAY_32 is ARRAY (0 to 31) of STD_LOGIC_VECTOR(31 downto 0);
 signal x_register: ARRAY_32 :=	(	
@@ -66,20 +66,23 @@ begin
 --register1 <= x_register(to_integer(unsigned(read1(4 downto 0))));
 --register2 <= x_register(to_integer(unsigned(read2(4 downto 0))));
 
-process(clk, reset, regWrite) begin
---if(clk'event and clk = '1') then
+process(clk, reset,read1, read2) begin
+if(clk'event and clk = '1') then
 	if(reset = '1') then 
 	read_data1 <= x_register(conv_integer(read1(4 downto 0)));
 	read_data2 <= x_register(conv_integer(read2(4 downto 0)));
+	elsif(reset = '0') then
+	read_data1 <= X"00000000";
+	read_data2 <= X"00000000";
+	end if;
+end if;
+end process;
+process(clk, reset, regWrite, write_register, write_data) begin
+if(clk'event and clk = '0') then
 	if(regWrite = '1') then
 		x_register(conv_integer(write_register(4 downto 0)))<= write_data; 
 		end if;
-elsif(reset = '0') then
-	read_data1 <= X"00000000";
-	read_data2 <= X"00000000";
---end if;
-end if;
+		end if;
 end process;
-
 
 end Behavioral;
