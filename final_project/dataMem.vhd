@@ -23,11 +23,13 @@ use IEEE.STD_LOGIC_UNSIGNED.All;
 
 entity dataMem is
 
-    Port ( memRead : in  STD_LOGIC;
-           memWrite : in  STD_LOGIC;
-           addr : in  STD_LOGIC_VECTOR (31 downto 0);
-           dataRead : out  STD_LOGIC_VECTOR (31 downto 0);
-           dataWrite : in  STD_LOGIC_VECTOR (31 downto 0)
+    Port ( 	
+				CLK: IN std_logic;
+				memRead : in  STD_LOGIC;
+				memWrite : in  STD_LOGIC;
+				addr : in  STD_LOGIC_VECTOR (31 downto 0);
+				dataRead : out  STD_LOGIC_VECTOR (31 downto 0);
+				dataWrite : in  STD_LOGIC_VECTOR (31 downto 0)
 			 );
 
 end dataMem;
@@ -74,9 +76,9 @@ begin
 process (memRead, memWrite, addr, dataWrite)
 begin
 if (memRead = '1' AND memWrite = '0') then
-	dataRead <= dataMem(CONV_INTEGER(addr(31 DOWNTO 0)));
+	dataRead <= dataMem(CONV_INTEGER(addr(7 DOWNTO 0)));
 elsif (memWrite = '1' AND memRead = '0') then 
-	dataMem(CONV_INTEGER(addr(31 DOWNTO 0))) <= dataWrite;
+	dataMem(CONV_INTEGER(addr(7 DOWNTO 0))) <= dataWrite;
 else NULL;
 end if;
 end process;

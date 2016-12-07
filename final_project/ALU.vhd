@@ -32,40 +32,49 @@ use IEEE.STD_LOGIC_unsigned.ALL;
 --use UNISIM.VComponents.all;
 
 entity ALU is
-Port( Data1 : in std_logic_vector(31 downto 0);
+Port( ALUCtr : in std_logic_vector(3 downto 0);
+		Data1 : in std_logic_vector(31 downto 0);
 		Data2 : in std_logic_vector(31 downto 0);
 		Zero : out STD_LOGIC;
-		ALUResult : out std_logic_vector(31 downto 0);
-		ALUCtr : in std_logic_vector(2 downto 0));
+		Negative: out std_logic;
+		ALUResult : out std_logic_vector(31 downto 0):=X"00000000";
+		clk: in std_logic;
+		reset: in std_logic);
 end ALU;
 
 architecture Behavioral of ALU is
 
-signal readData1, readData2 : std_logic_vector(31 downto 0);
+--signal readData1, readData2 : std_logic_vector(31 downto 0);
 signal ALUOutput : std_logic_vector(31 downto 0);
 
 begin
 
-Zero <= '1' when (ALUOutput = X"00000000") else '0';
---ALUResult <= (X"000000" & "000" & ALUOutput(31)) when ALUCtr = "111" else
-	--				ALUOutput;
+
 			
-process(ALUCtr, readData1, readData2)
+process(ALUCtr, clk ,reset)
 begin
+--if(clk'event and clk='1') then
+if(reset ='1')then
+
+if(ALUOutput = X"00000000") then
+Zero <= '1'; 
+else zero<='0'; end if;
+
 	case ALUCtr is
-			when "000" => ALUOutput <= Data1 + Data2;
-			when "001" => ALUOutput <= Data1 + (not Data2) + 1;
-			when "010" => ALUOutput <= Data1 and Data2;
-			when "011" => ALUOutput <= Data1 or Data2;
-			when "100" => ALUOutput <= Data1 nor Data2;
-			when "101" => 
+			when "0000" => ALUOutput <= Data1 + Data2;
+			when "0001" => ALUOutput <= Data1 + (not Data2) + 1;
+			when "0010" => ALUOutput <= Data1 and Data2;
+			when "0011" => ALUOutput <= Data1 or Data2;
+			when "0100" => ALUOutput <= Data1 nor Data2;
+			when "0101" => 
 							if((Data1 - data2) < 0) then 
-								Zero <= '0';
-								ALUOutput <= "UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU";
+								Negative <= '1';
+								---ALUOutput <= "UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU";
 								else
-								ALUOutput <= "UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU";
+								Negative <= '0';
+								--ALUOutput <= "UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU";
 								end if;
-			when "110" => 			CASE data2(4 DOWNTO 0) is
+			when "0110" => 			CASE data2(4 DOWNTO 0) is
 												WHEN "00001" => ALUoutput <= data1(30 DOWNTO 0) & data1(31) ;
 												WHEN "00010" => ALUoutput <= data1(29 DOWNTO 0) & data1(31 DOWNTO 30) ;
 												WHEN "00011" => ALUoutput <= data1(28 DOWNTO 0) & data1(31 DOWNTO 29) ;
@@ -101,7 +110,7 @@ begin
 										end case;
 														
 							
-			when "111" => 				case data2(4 DOWNTO 0) is
+			when "0111" => 				case data2(4 DOWNTO 0) is
 														WHEN "00001" => ALUoutput <=	data1(0) & data1(31 DOWNTO 1) ;
 														WHEN "00010" => ALUoutput <= data1(1 DOWNTO 0) & data1(31 DOWNTO 2);
 														WHEN "00011" => ALUoutput <= data1(2 DOWNTO 0) & data1(31 DOWNTO 3);
@@ -137,10 +146,14 @@ begin
 											end case;
 
 			
-			when others => ALUOutput <= "UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU";
+			when others => ALUOutput <= "00000000000000000000000000000000";
 			
 			end case;
+			end if;
+			--end if;
+			
 end process;		
+AluResult <= ALUOutput;
 
 end Behavioral;
 

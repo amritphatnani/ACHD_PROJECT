@@ -31,7 +31,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity ControlUnit is
     Port ( opcode : in  STD_LOGIC_VECTOR (5 downto 0);
-				ALUOP: out STD_LOGIC_VECTOR (2 downto 0);
+				clk: in std_logic;
+				reset: in std_logic;
+				ALUOP: out STD_LOGIC_VECTOR (3 downto 0);
 				RegDst: out STD_LOGIC;
 				Branch : out STD_LOGIC;
 				MemRead: out std_logic;
@@ -40,13 +42,32 @@ entity ControlUnit is
 				AluSrc: out std_logic;
 				RegWrite: out std_logic;
 				Jump: out std_logic;
-				
 				Halt: out std_logic);
 end ControlUnit;
 
 architecture Behavioral of ControlUnit is
-signal Rtype,ORI, ANDI, SUBI, ADDI, BNE, BEQ, BLT, LW, SW, Itype, SHL, SHR, BRN: std_logic;
+signal Rtype,ORI, ANDI, SUBI, ADDI, BNE, BEQ, BLT, LW, SW, Itype, SHL, SHR, BRN,hlt: std_logic;
 begin
+--process(reset,opcode) begin
+--if (clk='1' and clk'event) then
+--	if(reset = '1') then
+--case OPcode is
+--			when "000000" => Rtype <= '1'; LW <= '0'; SW <= '0'; BEQ <= '0'; BNE <= '0'; BLT <= '0'; ORI <= '0'; ANDI<= '0'; SUBI<= '0'; ADDI <= '0'; SHL <= '0'; SHR <= '0'; Jump <= '0'; Hlt <= '0';
+--			when "000111" => Rtype <= '0'; LW <= '1'; SW <= '0'; BEQ <= '0'; BNE <= '0'; BLT <= '0'; ORI <= '0'; ANDI<= '0'; SUBI<= '0'; ADDI <= '0'; SHL <= '0'; SHR <= '0'; Jump <= '0'; Hlt <= '0'; 
+--			when "001000" =>  Rtype <= '0'; LW <= '0'; SW <= '1'; BEQ <= '0'; BNE <= '0'; BLT <= '0'; ORI <= '0'; ANDI<= '0'; SUBI<= '0'; ADDI <= '0'; SHL <= '0'; SHR <= '0'; Jump <= '0'; Hlt <= '0';
+--			when "001010" =>  Rtype <= '0'; LW <= '0'; SW <= '0'; BEQ <= '1'; BNE <= '0'; BLT <= '0'; ORI <= '0'; ANDI<= '0'; SUBI<= '0'; ADDI <= '0'; SHL <= '0'; SHR <= '0'; Jump <= '0'; Hlt <= '0';
+--			when "001011" =>  Rtype <= '0'; LW <= '0'; SW <= '0'; BEQ <= '0'; BNE <= '1'; BLT <= '0'; ORI <= '0'; ANDI<= '0'; SUBI<= '0'; ADDI <= '0'; SHL <= '0'; SHR <= '0'; Jump <= '0'; Hlt <= '0';
+--			when "001001" =>  Rtype <= '0'; LW <= '0'; SW <= '0'; BEQ <= '0'; BNE <= '0'; BLT <= '1'; ORI <= '0'; ANDI<= '0'; SUBI<= '0'; ADDI <= '0'; SHL <= '0'; SHR <= '0'; Jump <= '0'; Hlt <= '0';
+--			when "000100" =>  Rtype <= '0'; LW <= '0'; SW <= '0'; BEQ <= '0'; BNE <= '0'; BLT <= '0'; ORI <= '1'; ANDI<= '0'; SUBI<= '0'; ADDI <= '0'; SHL <= '0'; SHR <= '0'; Jump <= '0'; Hlt <= '0';
+--			when "000011" =>  Rtype <= '0'; LW <= '0'; SW <= '0'; BEQ <= '0'; BNE <= '0'; BLT <= '0'; ORI <= '0'; ANDI<= '1'; SUBI<= '0'; ADDI <= '0'; SHL <= '0'; SHR <= '0'; Jump <= '0'; Hlt <= '0';
+--			when "000010" =>  Rtype <= '0'; LW <= '0'; SW <= '0'; BEQ <= '0'; BNE <= '0'; BLT <= '0'; ORI <= '0'; ANDI<= '0'; SUBI<= '1'; ADDI <= '0'; SHL <= '0'; SHR <= '0'; Jump <= '0'; Hlt <= '0';
+--			when "000001" =>  Rtype <= '0'; LW <= '0'; SW <= '0'; BEQ <= '0'; BNE <= '0'; BLT <= '0'; ORI <= '0'; ANDI<= '0'; SUBI<= '0'; ADDI <= '1'; SHL <= '0'; SHR <= '0'; Jump <= '0'; Hlt <= '0';
+--			when "000101" =>  Rtype <= '0'; LW <= '0'; SW <= '0'; BEQ <= '0'; BNE <= '0'; BLT <= '0'; ORI <= '0'; ANDI<= '0'; SUBI<= '0'; ADDI <= '0'; SHL <= '1'; SHR <= '0'; Jump <= '0'; Hlt <= '0';
+--			when "000110" =>  Rtype <= '0'; LW <= '0'; SW <= '0'; BEQ <= '0'; BNE <= '0'; BLT <= '0'; ORI <= '0'; ANDI<= '0'; SUBI<= '0'; ADDI <= '0'; SHL <= '0'; SHR <= '1'; Jump <= '0'; Hlt <= '0';
+--			when "001100" =>  Rtype <= '0'; LW <= '0'; SW <= '0'; BEQ <= '0'; BNE <= '0'; BLT <= '0'; ORI <= '0'; ANDI<= '0'; SUBI<= '0'; ADDI <= '0'; SHL <= '0'; SHR <= '0'; Jump <= '1'; Hlt <= '0';
+--			when "111111" =>  Rtype <= '0'; LW <= '0'; SW <= '0'; BEQ <= '0'; BNE <= '0'; BLT <= '0'; ORI <= '0'; ANDI<= '0'; SUBI<= '0'; ADDI <= '0'; SHL <= '0'; SHR <= '0'; Jump <= '0'; Hlt <= '1';
+--			when others => Rtype <= '0'; LW <= '0'; SW <= '0'; BEQ <= '0'; BNE <= '0'; BLT <= '0'; ORI <= '0'; ANDI<= '0'; SUBI<= '0'; ADDI <= '0'; SHL <= '0'; SHR <= '0'; Jump <= '0'; Hlt <= '0';
+--	end case;
 
 Rtype <= '1' when opcode = "000000" else '0';
 LW <= '1' when opcode = "000111" else '0';
@@ -62,10 +83,11 @@ SHL <= '1' when opcode = "000101" else '0';
 SHR <= '1' when opcode = "000110" else '0';
 Jump <= '1' when opcode = "001100" else '0';
 Halt <= '1' when opcode = "111111" else '0';
+--halt <= hlt;
 
 Itype <= ADDI or SUBI or ORI or ANDI or SHL or SHR;
-Branch <= brn;
 BRN <= BEQ or BNE;
+Branch <= brn;
 ALUSrc <= LW or SW or Itype;
 MemRead <= LW;
 MemWrite <= SW;
@@ -73,7 +95,22 @@ RegWrite <= Rtype or LW or Itype;
 RegDst <= Rtype;
 MemtoReg <= LW;
 
-process(rtype,itype,brn,blt) begin 
+--elsif(reset='0') then
+----ALUOP <= "1111";
+--RegDst <= '0';
+--Branch <= '0'; 
+--MemRead <= '0';
+--MemtoReg <= '0';
+--MemWrite <= '0';
+--AluSrc <= '0';
+--RegWrite <= '0';
+--Jump <= '0';
+--Halt <= '0';
+----end if;
+--end if;
+--end process;
+
+process(rtype,brn,blt, hlt,sw,lw,addi,subi,andi,ori,shl,shr,hlt) begin 
 if(SW ='1' or LW = '1') then
 Aluop <= "0000";
 elsif(Rtype ='1') then
@@ -94,6 +131,9 @@ elsif(SHL = '1') then
 ALUop <= "1000";
 elsif(SHR = '1') then
 ALUop <= "1001";
+elsif(hlt = '1') then
+ALUop<= "1111";
+
 end if;
 end process;
 

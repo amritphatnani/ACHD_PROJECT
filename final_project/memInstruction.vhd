@@ -17,23 +17,26 @@
 -- Additional Comments: 
 --
 ----------------------------------------------------------------------------------library IEEE;
+library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.All;
 
 entity memInstruction is
 
 Port(
-		addr : in  STD_LOGIC_VECTOR (31 downto 0);
-		instrct : out  STD_LOGIC_VECTOR (31 downto 0)
+		address : in  STD_LOGIC_VECTOR (31 downto 0);
+		instruction : out  STD_LOGIC_VECTOR (31 downto 0);
+		clk: in STD_logic;
+		reset: in STD_logic
 	  );
 
-end memInstructrion;
+end memInstruction;
 
 architecture Behavioral of memInstruction is
 
 TYPE ram IS ARRAY (0 TO 255) OF STD_LOGIC_VECTOR(31 DOWNTO 0);
 
-signal instrctMem: ram := (	X"20090001",X"200a0001",X"200b0000",X"ad690000",X"216b0004",X"ad6a0000",X"216b0004",X"20080000",
+signal instrctMem: ram := (	X"04200007",X"04400008",X"00221810",X"FC000000",X"216b0004",X"ad6a0000",X"216b0004",X"20080000",
 			X"012a6020",X"000a4820",X"000c5020",X"ad6c0000",X"216b0004",X"21080001",X"2001000f",X"1428fff8",
 			X"00000000",X"00000000",X"00000000",X"00000000",X"00000000",X"00000000",X"00000000",X"00000000",
 			X"00000000",X"00000000",X"00000000",X"00000000",X"00000000",X"00000000",X"00000000",X"00000000",
@@ -67,8 +70,13 @@ signal instrctMem: ram := (	X"20090001",X"200a0001",X"200b0000",X"ad690000",X"21
 			X"00000000",X"00000000",X"00000000",X"00000000",X"00000000",X"00000000",X"00000000",X"00000000");
 begin
 
-instrct <= instrctMem(CONV_INTEGER(addr(31 DOWNTO 0)));
-
+process(clk, reset) begin
+if(clk ='1' and clk'event) then
+	if(reset ='1') then
+instruction <= instrctMem(CONV_INTEGER(address(7 DOWNTO 0)));
+end if;
+end if;
+end process;
 end Behavioral;
 
 

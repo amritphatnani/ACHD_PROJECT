@@ -33,7 +33,8 @@ entity InstructionFetch is
 Port(branch_in : in std_logic_vector (31 downto 0);
 		jump: in std_logic;
 		branch: in std_logic;
-		clk : std_logic;
+		halt: in std_logic;
+		clk : in std_logic;
 		reset: in std_logic;
 		instruction: out std_logic_vector(31 downto 0)
 );
@@ -48,9 +49,14 @@ component program_counter is
            output : out  STD_LOGIC_VECTOR (31 downto 0));
 end component;
 
-component ShiftLeft2Jump is
-Port( input : in std_logic_vector(25 downto 0);
-		output : out std_logic_vector(27 downto 0));
+--component ShiftLeft2Jump is
+--Port( input : in std_logic_vector(25 downto 0);
+--		output : out std_logic_vector(27 downto 0));
+--end component;
+
+component ShiftLeft2 is
+Port( input : in std_logic_vector(31 downto 0);
+		output : out std_logic_vector(31 downto 0));
 end component;
 
 component mux_2_1 is
@@ -66,8 +72,53 @@ Port (number1 : in std_logic_vector(31 downto 0);
 		result : out std_logic_vector(31 downto 0));
 end component;
 
+component memInstruction is
+Port(
+		address : in  STD_LOGIC_VECTOR (31 downto 0);
+		instruction : out  STD_LOGIC_VECTOR (31 downto 0);
+		clk: in STD_logic;
+		reset: in STD_logic
+	  );
+end component;
+
+signal PC_current: std_logic_vector(31 downto 0);
+signal PC_mux_output: std_logic_vector(31 downto 0);
+signal PC_output : std_logic_vector(31 downto 0);
+signal PC_increment : std_logic_vector(31 downto 0):= X"00000001" ;
+signal PC_adder_output : std_logic_vector(31 downto 0);
+signal branch_shift_output: std_logic_vector(31 downto 0);
+signal branch_adder_output: std_logic_vector(31 downto 0);
+signal jump_shift_output: std_logic_vector(31 downto 0);
+signal InstrMemOut: std_logic_vector(31 downto 0);
+signal jump_address: std_logic_vector(31 downto 0);
+signal branch_address: std_logic_vector(31 downto 0);
+signal PC_next: std_logic_vector(31 downto 0); 
 begin
 
+
+HALT_MUX: mux_2_1 PORT MAP(pc_next,PC_current,halt,pc_mux_output);
+
+PC: Program_counter PORT MAP(pc_mux_output,clk, reset, PC_output);
+
+pc_current <= pc_output;
+
+InstrMem: memInstruction PORT MAP(PC_output, InstrMemOut, clk, reset);
+
+instruction <= InstrMemOut;
+
+PC_ADDER: Adder PORT MAP(PC_output, PC_increment, pc_adder_output);
+
+Shift_Jump: ShiftLeft2 PORT MAP ("000000" & InstrMemOut(25 downto 0), jump_shift_output);
+
+jump_address <= pc_adder_output(31 downto 28) & jump_shift_output(27 downto 0);
+
+Jump_mux : mux_2_1 PORT MAP(branch_address, jump_address, jump, PC_next);
+
+Branch_Shift: ShiftLeft2 PORT MAP(branch_in, branch_shift_output);
+
+Branch_Adder: Adder PORT MAP(branch_shift_output, pc_adder_output, branch_adder_output);
+
+Branch_MUX: mux_2_1 PORT MAP(pc_adder_output, branch_adder_output, branch, branch_address);
 
 end Behavioral;
 
