@@ -30,38 +30,45 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity ALUCtrl is
-port( ALUop : in std_logic_vector(2 downto 0);
+port( ALUop : in std_logic_vector(3 downto 0);
 		funct : in std_logic_vector (5 downto 0);
-		ALUCtr: out std_logic_vector (2 downto 0));
+		ALUCtr: out std_logic_vector (3 downto 0);
+		clk : in std_logic;
+		reset: in std_logic);
 end ALUCtrl;
 
 architecture Behavioral of ALUCtrl is
 
 begin
-process(aluop, funct)
+process(aluop, funct, clk, reset)
 begin
-
+--if(clk'event and clk ='1') then
+if(reset ='1') then
 	case ALUop is 
-			when "000" => ALUctr <= "000"; --LW/SW
-			when "001" => ALUctr <= "001"; --BEQ/BNE
-			when "100" => ALuctr <= "000"; --ADDI
-			when "101" => ALUctr <= "001"; --SUBI
-			when "110" => ALUctr <= "010"; --ANDI
-			when "111" => ALUctr <= "011"; --ORI
-			when "011" => Aluctr <= "101"; --BLT
-			when "010" => 
+			when "0000" => ALUctr <= "0000"; --LW/SW
+			when "0001" => ALUctr <= "0001"; --BEQ/BNE
+			when "0100" => ALuctr <= "0000"; --ADDI
+			when "0101" => ALUctr <= "0001"; --SUBI
+			when "0110" => ALUctr <= "0010"; --ANDI
+			when "0111" => ALUctr <= "0011"; --ORI
+			when "0011" => Aluctr <= "0101"; --BLT
+			when "1000" => Aluctr <= "0110"; --SHL
+			when "1001" => ALUctr <= "0111"; --SHR
+			when "0010" => 
 						case funct is
-								when "010000" => ALUctr <= "000"; --ADD
-								when "010001" => ALUctr <= "001"; --SUB
-								when "010010" => ALUctr <= "010"; --AND
-								when "010011" => ALUcrt <= "011"; --OR
-								when "010100" => ALUctr <= "100"; --NOR
-								when others => ALuctr <= "UUU";
+								when "010000" => ALUctr <= "0000"; --ADD
+								when "010001" => ALUctr <= "0001"; --SUB
+								when "010010" => ALUctr <= "0010"; --AND
+								when "010011" => ALUctr <= "0011"; --OR
+								when "010100" => ALUctr <= "0100"; --NOR
+								when others => ALuctr <= "1111";
 								
 						end case;
 			
-			when others => ALUctr <= "UUU";
+			when others => ALUctr <= "UUUU";
 	end case;
+	end if;
+	--end if;
 end process;
 
 --ALUctr(2) <= ALUop(0) OR (ALUop(1) and funct_o(1));
