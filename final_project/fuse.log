@@ -50,5 +50,5 @@ Waiting for 6 sub-compilation(s) to finish...
 WARNING:Simulator - Unable to copy libPortabilityNOSH.dll to the simulation executable directory: boost::filesystem::copy_file: The system cannot find the path specified, "isim\MIPS_isim_beh.exe.sim\libPortability.dll".
 Compiled 38 VHDL Units
 Built simulation executable C:/Users/amrit/Documents/GitHub/ACHD_PROJECT/final_project/MIPS_isim_beh.exe
-Fuse Memory Usage: 38700 KB
-Fuse CPU Usage: 780 ms
+Fuse Memory Usage: 38716 KB
+Fuse CPU Usage: 750 ms
