@@ -73,7 +73,7 @@ signal dataMem: ram := (	X"00000000",X"00000000",X"00000000",X"00000000",X"00000
 
 begin
 
-process (memRead, memWrite, addr, dataWrite)
+process (addr)
 begin
 if (memRead = '1' AND memWrite = '0') then
 	dataRead <= dataMem(CONV_INTEGER(addr(7 DOWNTO 0)));

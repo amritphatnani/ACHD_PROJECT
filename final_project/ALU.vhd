@@ -51,7 +51,7 @@ begin
 
 
 			
-process(ALUCtr, clk ,reset)
+process(ALUCtr, clk ,reset,data1,data2)
 begin
 --if(clk'event and clk='1') then
 if(reset ='1')then
@@ -62,7 +62,7 @@ else zero<='0'; end if;
 
 	case ALUCtr is
 			when "0000" => ALUOutput <= Data1 + Data2;
-			when "0001" => ALUOutput <= Data1 - Data2;
+			when "0001" => ALUOutput <= Data1 + (not Data2) + 1;
 			when "0010" => ALUOutput <= Data1 and Data2;
 			when "0011" => ALUOutput <= Data1 or Data2;
 			when "0100" => ALUOutput <= Data1 nor Data2;

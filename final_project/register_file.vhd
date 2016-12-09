@@ -40,19 +40,19 @@ begin
 
 
 --	-- Port A
---process(clk)
---begin
+process(addr_a)
+begin
 
 		q_a <= ram(conv_integer(addr_a));
---  	end process;
+  	end process;
 
---process(clk)
---begin
+process(addr_b)
+begin
 		q_b <= ram(conv_integer(addr_b));
---  	end process;
+  	end process;
 
 	-- Port B 
-	process(clk,we_b,wrt_data,wrt_addr)
+	process(wrt_addr)
 	begin
 	--if(rising_edge(clk)) then 
 		if(we_b = '1') then

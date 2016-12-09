@@ -96,7 +96,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1481256783" xil_pn:in_ck="3158611876420257086" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1481256783">
+    <transform xil_pn:end_ts="1481314484" xil_pn:in_ck="3158611876420257086" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1481314484">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ALU.vhd"/>
@@ -131,7 +131,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1481256783" xil_pn:in_ck="3158611876420257086" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1481256783">
+    <transform xil_pn:end_ts="1481314484" xil_pn:in_ck="3158611876420257086" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1481314484">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ALU.vhd"/>
@@ -154,9 +154,10 @@
       <outfile xil_pn:name="registerFile.vhd"/>
       <outfile xil_pn:name="register_file.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1481256788" xil_pn:in_ck="3158611876420257086" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-7114237924734007332" xil_pn:start_ts="1481256783">
+    <transform xil_pn:end_ts="1481314488" xil_pn:in_ck="3158611876420257086" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-7114237924734007332" xil_pn:start_ts="1481314484">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="MIPS_beh.prj"/>
@@ -166,9 +167,11 @@
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1481256788" xil_pn:in_ck="952951930676642886" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="5026938173584537481" xil_pn:start_ts="1481256788">
+    <transform xil_pn:end_ts="1481314489" xil_pn:in_ck="952951930676642886" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="5026938173584537481" xil_pn:start_ts="1481314488">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="MIPS_isim_beh.wdb"/>
