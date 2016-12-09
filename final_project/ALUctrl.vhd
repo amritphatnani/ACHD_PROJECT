@@ -38,39 +38,39 @@ port( ALUop : in std_logic_vector(3 downto 0);
 end ALUCtrl;
 
 architecture Behavioral of ALUCtrl is
-
+signal Alu_ctr : std_logic_vector(3 downto 0);
 begin
 process(aluop, funct, clk, reset)
 begin
---if(clk'event and clk ='1') then
+--if(clk'event and clk ='0') then
 if(reset ='1') then
 	case ALUop is 
-			when "0000" => ALUctr <= "0000"; --LW/SW
-			when "0001" => ALUctr <= "0001"; --BEQ/BNE
-			when "0100" => ALuctr <= "0000"; --ADDI
-			when "0101" => ALUctr <= "0001"; --SUBI
-			when "0110" => ALUctr <= "0010"; --ANDI
-			when "0111" => ALUctr <= "0011"; --ORI
-			when "0011" => Aluctr <= "0101"; --BLT
-			when "1000" => Aluctr <= "0110"; --SHL
-			when "1001" => ALUctr <= "0111"; --SHR
+			when "0000" => Alu_CTR <= "0000"; --LW/SW
+			when "0001" => Alu_CTR <= "0001"; --BEQ/BNE
+			when "0100" => Alu_CTR <= "0000"; --ADDI
+			when "0101" => Alu_CTR <= "0001"; --SUBI
+			when "0110" => Alu_CTR <= "0010"; --ANDI
+			when "0111" => Alu_CTR <= "0011"; --ORI
+			when "0011" => Alu_CTR <= "0101"; --BLT
+			when "1000" => Alu_CTR <= "0110"; --SHL
+			when "1001" => Alu_CTR <= "0111"; --SHR
 			when "0010" => 
 						case funct is
-								when "010000" => ALUctr <= "0000"; --ADD
-								when "010001" => ALUctr <= "0001"; --SUB
-								when "010010" => ALUctr <= "0010"; --AND
-								when "010011" => ALUctr <= "0011"; --OR
-								when "010100" => ALUctr <= "0100"; --NOR
-								when others => ALuctr <= "1111";
+								when "010000" => Alu_CTR <= "0000"; --ADD
+								when "010001" => Alu_CTR <= "0001"; --SUB
+								when "010010" => Alu_CTR <= "0010"; --AND
+								when "010011" => Alu_CTR <= "0011"; --OR
+								when "010100" => Alu_CTR <= "0100"; --NOR
+								when others => Alu_CTR <= "1111";
 								
 						end case;
 			
-			when others => ALUctr <= "UUUU";
+			when others => Alu_CTR <= Alu_ctr;
 	end case;
-	end if;
 	--end if;
+	end if;
 end process;
-
+AluCtr <= Alu_ctr;
 --ALUctr(2) <= ALUop(0) OR (ALUop(1) and funct_o(1));
 --ALUctr(1) <= (NOT ALUop(1)) OR (NOT funct_o(2));
 --ALUctr(0) <= ALUop(1) AND (funct_o(0) or funct_0(3));

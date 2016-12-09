@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Reading design: MIPS.prj
 
@@ -123,16 +123,22 @@ Parsing architecture <Behavioral> of entity <adder>.
 Parsing VHDL file "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\SignExt.vhd" into library work
 Parsing entity <signExt>.
 Parsing architecture <Behavioral> of entity <signext>.
-Parsing VHDL file "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\registerFile.vhd" into library work
-Parsing entity <registerFile>.
-Parsing architecture <Behavioral> of entity <registerfile>.
+Parsing VHDL file "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\register_file.vhd" into library work
+Parsing entity <register_file>.
+Parsing architecture <rtl> of entity <register_file>.
 Parsing VHDL file "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\mux_5bits.vhd" into library work
 Parsing entity <mux_5bits>.
 Parsing architecture <Behavioral> of entity <mux_5bits>.
 Parsing VHDL file "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\InstructionFetch.vhd" into library work
 Parsing entity <InstructionFetch>.
 Parsing architecture <Behavioral> of entity <instructionfetch>.
-WARNING:HDLCompiler:946 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\InstructionFetch.vhd" Line 109: Actual for formal port input is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\InstructionFetch.vhd" Line 111: Actual for formal port input is neither a static name nor a globally static expression
+Parsing VHDL file "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ff_32bit.vhd" into library work
+Parsing entity <ff_32bit>.
+Parsing architecture <Behavioral> of entity <ff_32bit>.
+Parsing VHDL file "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ff_1bit.vhd" into library work
+Parsing entity <ff_1bit>.
+Parsing architecture <Behavioral> of entity <ff_1bit>.
 Parsing VHDL file "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\dataMem.vhd" into library work
 Parsing entity <dataMem>.
 Parsing architecture <Behavioral> of entity <datamem>.
@@ -158,7 +164,7 @@ Elaborating entity <MIPS> (architecture <Behavioral>) from library <work>.
 Elaborating entity <signExt> (architecture <Behavioral>) from library <work>.
 
 Elaborating entity <InstructionFetch> (architecture <Behavioral>) from library <work>.
-WARNING:HDLCompiler:871 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\InstructionFetch.vhd" Line 85: Using initial value "00000000000000000000000000000001" for pc_increment since it is never assigned
+WARNING:HDLCompiler:871 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\InstructionFetch.vhd" Line 87: Using initial value "00000000000000000000000000000001" for pc_increment since it is never assigned
 
 Elaborating entity <mux_2_1> (architecture <Behavioral>) from library <work>.
 
@@ -171,34 +177,21 @@ Elaborating entity <Adder> (architecture <Behavioral>) from library <work>.
 Elaborating entity <ShiftLeft2> (architecture <Behavioral>) from library <work>.
 
 Elaborating entity <ControlUnit> (architecture <Behavioral>) from library <work>.
-WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ControlUnit.vhd" Line 76: sw should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ControlUnit.vhd" Line 84: addi should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ControlUnit.vhd" Line 86: subi should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ControlUnit.vhd" Line 88: andi should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ControlUnit.vhd" Line 90: ori should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ControlUnit.vhd" Line 92: shl should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ControlUnit.vhd" Line 94: shr should be on the sensitivity list of the process
+WARNING:HDLCompiler:634 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ControlUnit.vhd" Line 49: Net <hlt> does not have a driver.
 
-Elaborating entity <registerFile> (architecture <Behavioral>) from library <work>.
+Elaborating entity <register_file> (architecture <rtl>) with generics from library <work>.
 
 Elaborating entity <ALUCtrl> (architecture <Behavioral>) from library <work>.
 
 Elaborating entity <ALU> (architecture <Behavioral>) from library <work>.
-WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 56: data1 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 57: data1 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 58: data1 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 59: data1 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 60: data1 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 62: data1 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 69: data2 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 59: aluoutput should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 64: data1 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 65: data1 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 66: data1 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 67: data1 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 68: data1 should be on the sensitivity list of the process
 WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 70: data1 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 71: data1 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 72: data1 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 73: data1 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 74: data1 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 75: data1 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 76: data1 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 77: data1 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 77: data2 should be on the sensitivity list of the process
 WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 78: data1 should be on the sensitivity list of the process
 WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 79: data1 should be on the sensitivity list of the process
 WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 80: data1 should be on the sensitivity list of the process
@@ -223,15 +216,15 @@ WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_pro
 WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 99: data1 should be on the sensitivity list of the process
 WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 100: data1 should be on the sensitivity list of the process
 WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 101: data1 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 105: data2 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 102: data1 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 103: data1 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 104: data1 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 105: data1 should be on the sensitivity list of the process
 WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 106: data1 should be on the sensitivity list of the process
 WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 107: data1 should be on the sensitivity list of the process
 WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 108: data1 should be on the sensitivity list of the process
 WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 109: data1 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 110: data1 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 111: data1 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 112: data1 should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 113: data1 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 113: data2 should be on the sensitivity list of the process
 WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 114: data1 should be on the sensitivity list of the process
 WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 115: data1 should be on the sensitivity list of the process
 WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 116: data1 should be on the sensitivity list of the process
@@ -256,12 +249,23 @@ WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_pro
 WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 135: data1 should be on the sensitivity list of the process
 WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 136: data1 should be on the sensitivity list of the process
 WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 137: data1 should be on the sensitivity list of the process
-INFO:HDLCompiler:679 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 141. Case statement is complete. others clause is never selected
+WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 138: data1 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 139: data1 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 140: data1 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 141: data1 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 142: data1 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 143: data1 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 144: data1 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd" Line 145: data1 should be on the sensitivity list of the process
 
 Elaborating entity <dataMem> (architecture <Behavioral>) from library <work>.
 WARNING:HDLCompiler:92 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\dataMem.vhd" Line 79: datamem should be on the sensitivity list of the process
 
 Elaborating entity <mux_5bits> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <ff_1bit> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <ff_32bit> (architecture <Behavioral>) from library <work>.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -269,7 +273,6 @@ Elaborating entity <mux_5bits> (architecture <Behavioral>) from library <work>.
 
 Synthesizing Unit <MIPS>.
     Related source file is "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\MIPS.vhd".
-INFO:Xst:3210 - "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\MIPS.vhd" line 171: Output port <RegWrite> of the instance <Control_Unit> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <MIPS> synthesized.
@@ -304,8 +307,10 @@ Synthesizing Unit <memInstruction>.
 WARNING:Xst:647 - Input <address<31:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:2999 - Signal 'instrctMem', unconnected in block 'memInstruction', is tied to its initial value.
     Found 256x32-bit single-port Read Only RAM <Mram_instrctMem> for signal <instrctMem>.
+    Found 32-bit register for signal <instruction>.
     Summary:
 	inferred   1 RAM(s).
+	inferred  32 D-type flip-flop(s).
 Unit <memInstruction> synthesized.
 
 Synthesizing Unit <Adder>.
@@ -324,136 +329,114 @@ Unit <ShiftLeft2> synthesized.
 
 Synthesizing Unit <ControlUnit>.
     Related source file is "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ControlUnit.vhd".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <hlt> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:737 - Found 1-bit latch for signal <ALUOP<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <ALUOP<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <ALUOP<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <ALUOP<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Summary:
 	inferred   4 Latch(s).
-	inferred  24 Multiplexer(s).
+	inferred  28 Multiplexer(s).
 Unit <ControlUnit> synthesized.
 
-Synthesizing Unit <registerFile>.
-    Related source file is "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\registerFile.vhd".
-WARNING:Xst:647 - Input <write_register> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <write_data> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:2999 - Signal 'x_register', unconnected in block 'registerFile', is tied to its initial value.
-    Found 32x32-bit dual-port Read Only RAM <Mram_x_register> for signal <x_register>.
-    Found 32-bit register for signal <read_data2>.
-    Found 32-bit register for signal <read_data1>.
+Synthesizing Unit <register_file>.
+    Related source file is "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\register_file.vhd".
+        DATA_WIDTH = 32
+        ADDR_WIDTH = 5
+    Found 32x32-bit dual-port RAM <Mram_ram> for signal <ram>.
+    Found 32-bit register for signal <q_b>.
+    Found 32-bit register for signal <q_a>.
     Summary:
 	inferred   1 RAM(s).
 	inferred  64 D-type flip-flop(s).
-Unit <registerFile> synthesized.
+	inferred   1 Multiplexer(s).
+Unit <register_file> synthesized.
 
 Synthesizing Unit <ALUCtrl>.
     Related source file is "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALUCtrl.vhd".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALUCtr<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALUCtr<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALUCtr<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALUCtr<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Summary:
-	inferred   8 Multiplexer(s).
+	inferred   4 Latch(s).
+	inferred   5 Multiplexer(s).
 Unit <ALUCtrl> synthesized.
 
 Synthesizing Unit <ALU>.
     Related source file is "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ALU.vhd".
-WARNING:Xst:653 - Signal <ALUResult> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-    Found 32-bit adder for signal <Data1[31]_Data2[31]_add_1_OUT> created at line 56.
-    Found 32-bit adder for signal <n0160> created at line 57.
-    Found 32-bit adder for signal <Data1[31]_GND_58_o_add_4_OUT> created at line 57.
-    Found 1-bit 7-to-1 multiplexer for signal <ALUCtr[2]_Data2[4]_Mux_13_o> created at line 55.
-    Found 1-bit 7-to-1 multiplexer for signal <ALUCtr[2]_Data2[4]_Mux_15_o> created at line 55.
-    Found 1-bit 7-to-1 multiplexer for signal <ALUCtr[2]_Data2[4]_Mux_17_o> created at line 55.
-    Found 1-bit 7-to-1 multiplexer for signal <ALUCtr[2]_Data2[4]_Mux_19_o> created at line 55.
-    Found 1-bit 7-to-1 multiplexer for signal <ALUCtr[2]_Data2[4]_Mux_21_o> created at line 55.
-    Found 1-bit 7-to-1 multiplexer for signal <ALUCtr[2]_Data2[4]_Mux_23_o> created at line 55.
-    Found 1-bit 7-to-1 multiplexer for signal <ALUCtr[2]_Data2[4]_Mux_25_o> created at line 55.
-    Found 1-bit 7-to-1 multiplexer for signal <ALUCtr[2]_Data2[4]_Mux_27_o> created at line 55.
-    Found 1-bit 7-to-1 multiplexer for signal <ALUCtr[2]_Data2[4]_Mux_29_o> created at line 55.
-    Found 1-bit 7-to-1 multiplexer for signal <ALUCtr[2]_Data2[4]_Mux_31_o> created at line 55.
-    Found 1-bit 7-to-1 multiplexer for signal <ALUCtr[2]_Data2[4]_Mux_33_o> created at line 55.
-    Found 1-bit 7-to-1 multiplexer for signal <ALUCtr[2]_Data2[4]_Mux_35_o> created at line 55.
-    Found 1-bit 7-to-1 multiplexer for signal <ALUCtr[2]_Data2[4]_Mux_37_o> created at line 55.
-    Found 1-bit 7-to-1 multiplexer for signal <ALUCtr[2]_Data2[4]_Mux_39_o> created at line 55.
-    Found 1-bit 7-to-1 multiplexer for signal <ALUCtr[2]_Data2[4]_Mux_41_o> created at line 55.
-    Found 1-bit 7-to-1 multiplexer for signal <ALUCtr[2]_Data2[4]_Mux_43_o> created at line 55.
-    Found 1-bit 7-to-1 multiplexer for signal <ALUCtr[2]_Data2[4]_Mux_45_o> created at line 55.
-    Found 1-bit 7-to-1 multiplexer for signal <ALUCtr[2]_Data2[4]_Mux_47_o> created at line 55.
-    Found 1-bit 7-to-1 multiplexer for signal <ALUCtr[2]_Data2[4]_Mux_49_o> created at line 55.
-    Found 1-bit 7-to-1 multiplexer for signal <ALUCtr[2]_Data2[4]_Mux_51_o> created at line 55.
-    Found 1-bit 7-to-1 multiplexer for signal <ALUCtr[2]_Data2[4]_Mux_53_o> created at line 55.
-    Found 1-bit 7-to-1 multiplexer for signal <ALUCtr[2]_Data2[4]_Mux_55_o> created at line 55.
-    Found 1-bit 7-to-1 multiplexer for signal <ALUCtr[2]_Data2[4]_Mux_57_o> created at line 55.
-    Found 1-bit 7-to-1 multiplexer for signal <ALUCtr[2]_Data2[4]_Mux_59_o> created at line 55.
-    Found 1-bit 7-to-1 multiplexer for signal <ALUCtr[2]_Data2[4]_Mux_61_o> created at line 55.
-    Found 1-bit 7-to-1 multiplexer for signal <ALUCtr[2]_Data2[4]_Mux_63_o> created at line 55.
-    Found 1-bit 7-to-1 multiplexer for signal <ALUCtr[2]_Data2[4]_Mux_65_o> created at line 55.
-    Found 1-bit 7-to-1 multiplexer for signal <ALUCtr[2]_Data2[4]_Mux_67_o> created at line 55.
-    Found 1-bit 7-to-1 multiplexer for signal <ALUCtr[2]_Data2[4]_Mux_69_o> created at line 55.
-    Found 1-bit 7-to-1 multiplexer for signal <ALUCtr[2]_Data2[4]_Mux_71_o> created at line 55.
-    Found 1-bit 7-to-1 multiplexer for signal <ALUCtr[2]_Data2[4]_Mux_73_o> created at line 55.
-    Found 1-bit 7-to-1 multiplexer for signal <ALUCtr[2]_Data2[4]_Mux_75_o> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<31>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<30>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<29>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<28>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<27>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<26>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<25>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<24>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<23>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<22>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<21>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<20>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<19>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<18>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<17>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<16>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<15>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<14>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<13>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<12>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<11>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<10>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<9>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<8>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<7>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<6>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<5>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<4>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<3>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<2>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<1>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<0>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<31>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<30>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<29>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<28>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<27>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<26>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<25>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<24>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<23>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<22>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<21>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<20>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<19>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<18>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<17>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<16>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<15>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<14>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<13>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<12>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<11>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<10>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<9>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<8>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<7>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<6>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<5>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<4>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<3>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<2>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<1>> created at line 55.
-    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<0>> created at line 55.
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 32-bit adder for signal <Data1[31]_Data2[31]_add_1_OUT> created at line 64.
+    Found 32-bit adder for signal <n0166> created at line 65.
+    Found 32-bit adder for signal <Data1[31]_GND_62_o_add_4_OUT> created at line 65.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<31>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<30>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<29>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<28>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<27>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<26>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<25>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<24>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<23>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<22>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<21>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<20>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<19>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<18>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<17>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<16>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<15>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<14>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<13>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<12>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<11>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<10>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<9>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<8>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<7>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<6>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<5>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<4>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<3>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<2>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<1>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[0]_wide_mux_9_OUT<0>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<31>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<30>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<29>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<28>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<27>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<26>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<25>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<24>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<23>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<22>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<21>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<20>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<19>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<18>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<17>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<16>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<15>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<14>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<13>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<12>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<11>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<10>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<9>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<8>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<7>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<6>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<5>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<4>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<3>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<2>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<1>> created at line 63.
+    Found 1-bit 32-to-1 multiplexer for signal <Data2[4]_Data1[30]_wide_mux_10_OUT<0>> created at line 63.
+WARNING:Xst:737 - Found 1-bit latch for signal <ALUOutput<31>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <ALUOutput<30>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <ALUOutput<29>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <ALUOutput<28>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -486,11 +469,11 @@ WARNING:Xst:737 - Found 1-bit latch for signal <ALUOutput<2>>. Latches may be ge
 WARNING:Xst:737 - Found 1-bit latch for signal <ALUOutput<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <ALUOutput<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <Negative>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <ALUOutput<31>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Zero>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Summary:
 	inferred   3 Adder/Subtractor(s).
-	inferred  33 Latch(s).
-	inferred  96 Multiplexer(s).
+	inferred  34 Latch(s).
+	inferred 288 Multiplexer(s).
 Unit <ALU> synthesized.
 
 Synthesizing Unit <dataMem>.
@@ -8764,27 +8747,41 @@ Synthesizing Unit <mux_5bits>.
 	inferred   1 Multiplexer(s).
 Unit <mux_5bits> synthesized.
 
+Synthesizing Unit <ff_1bit>.
+    Related source file is "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ff_1bit.vhd".
+    Found 1-bit register for signal <output>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <ff_1bit> synthesized.
+
+Synthesizing Unit <ff_32bit>.
+    Related source file is "C:\Users\amrit\Documents\GitHub\ACHD_PROJECT\final_project\ff_32bit.vhd".
+    Found 32-bit register for signal <output>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <ff_32bit> synthesized.
+
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
 # RAMs                                                 : 2
  256x32-bit single-port Read Only RAM                  : 1
- 32x32-bit dual-port Read Only RAM                     : 1
+ 32x32-bit dual-port RAM                               : 1
 # Adders/Subtractors                                   : 5
  32-bit adder                                          : 5
-# Registers                                            : 3
- 32-bit register                                       : 3
-# Latches                                              : 8261
- 1-bit latch                                           : 8261
-# Multiplexers                                         : 166
- 1-bit 2-to-1 multiplexer                              : 24
+# Registers                                            : 6
+ 1-bit register                                        : 1
+ 32-bit register                                       : 5
+# Latches                                              : 8266
+ 1-bit latch                                           : 8266
+# Multiplexers                                         : 361
+ 1-bit 2-to-1 multiplexer                              : 256
  1-bit 256-to-1 multiplexer                            : 32
  1-bit 32-to-1 multiplexer                             : 64
- 1-bit 7-to-1 multiplexer                              : 32
- 3-bit 2-to-1 multiplexer                              : 8
- 32-bit 2-to-1 multiplexer                             : 5
- 5-bit 2-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 6
+ 4-bit 2-to-1 multiplexer                              : 1
+ 5-bit 2-to-1 multiplexer                              : 2
 
 =========================================================================
 
@@ -8795,30 +8792,10 @@ Macro Statistics
 WARNING:Xst - The specified part-type was not generated at build time. XST is loading the full part-type and will therefore consume more CPU and memory.
 Loading device for application Rf_Device from file '7a100t.nph' in environment C:\Xilinx\14.7\ISE_DS\ISE\.
 Loading device for application Rf_Device from file '7a100t.nph' in environment C:\Xilinx\14.7\ISE_DS\ISE\.
-WARNING:Xst:1290 - Hierarchical block <DataMemory> is unconnected in block <MIPS>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <DMMux> is unconnected in block <MIPS>.
-   It will be removed from the design.
-WARNING:Xst:1290 - Hierarchical block <RFMux> is unconnected in block <MIPS>.
-   It will be removed from the design.
 WARNING:Xst:1710 - FF/Latch <Negative> (without init value) has a constant value of 0 in block <ALU_imp>. This FF/Latch will be trimmed during the optimization process.
 
-Synthesizing (advanced) Unit <memInstruction>.
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_instrctMem> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
-    -----------------------------------------------------------------------
-    | ram_type           | Distributed                         |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 256-word x 32-bit                   |          |
-    |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <address>       |          |
-    |     diA            | connected to signal <GND>           |          |
-    |     doA            | connected to internal node          |          |
-    -----------------------------------------------------------------------
-Unit <memInstruction> synthesized (advanced).
-
-Synthesizing (advanced) Unit <registerFile>.
-INFO:Xst:3226 - The RAM <Mram_x_register> will be implemented as a BLOCK RAM, absorbing the following register(s): <read_data2> <read_data1>
+Synthesizing (advanced) Unit <MIPS>.
+INFO:Xst:3226 - The RAM <RegisterFile/Mram_ram> will be implemented as a BLOCK RAM, absorbing the following register(s): <RegisterFile/q_b> <RegisterFile/q_a>
     -----------------------------------------------------------------------
     | ram_type           | Block                               |          |
     -----------------------------------------------------------------------
@@ -8826,13 +8803,10 @@ INFO:Xst:3226 - The RAM <Mram_x_register> will be implemented as a BLOCK RAM, ab
     |     aspect ratio   | 32-word x 32-bit                    |          |
     |     mode           | write-first                         |          |
     |     clkA           | connected to signal <clk>           | rise     |
-    |     enA            | connected to signal <reset_0>       | high     |
-    |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <read2>         |          |
-    |     diA            | connected to signal <GND>           |          |
-    |     doA            | connected to signal <read_data2>    |          |
-    |     dorstA         | connected to internal node          | high     |
-    | reset value        | 00000000000000000000000000000000               |
+    |     weA            | connected to signal <ff_1>          | high     |
+    |     addrA          | connected to signal <RT_MUX_output> |          |
+    |     diA            | connected to signal <ff_32>         |          |
+    |     doA            | connected to signal <RegData2>      |          |
     -----------------------------------------------------------------------
     | optimization       | speed                               |          |
     -----------------------------------------------------------------------
@@ -8840,38 +8814,59 @@ INFO:Xst:3226 - The RAM <Mram_x_register> will be implemented as a BLOCK RAM, ab
     |     aspect ratio   | 32-word x 32-bit                    |          |
     |     mode           | write-first                         |          |
     |     clkB           | connected to signal <clk>           | rise     |
-    |     enB            | connected to signal <reset_1>       | high     |
-    |     weB            | connected to signal <GND>           | high     |
-    |     addrB          | connected to signal <read1>         |          |
-    |     diB            | connected to signal <GND>           |          |
-    |     doB            | connected to signal <read_data1>    |          |
-    |     dorstB         | connected to internal node          | high     |
-    | reset value        | 00000000000000000000000000000000               |
+    |     addrB          | connected to signal <instruction<25:21>> |          |
+    |     doB            | connected to signal <RegData1>      |          |
     -----------------------------------------------------------------------
     | optimization       | speed                               |          |
     -----------------------------------------------------------------------
-Unit <registerFile> synthesized (advanced).
+INFO:Xst:3212 - HDL ADVISOR - Asynchronous or synchronous initialization of the register <Instruction_Fetch/PC/output> prevents it from being combined with the RAM <Instruction_Fetch/InstrMem/Mram_instrctMem> for implementation as read-only block RAM.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 32-bit                   |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <Instruction_Fetch/PC_output<7:0>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Instruction_Fetch/InstrMem/Mram_instrctMem> will be implemented as a BLOCK RAM, absorbing the following register(s): <Instruction_Fetch/InstrMem/instruction>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 32-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <reset>         | high     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <Instruction_Fetch/PC_output<7:0>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <instruction>   |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <MIPS> synthesized (advanced).
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
 # RAMs                                                 : 2
- 256x32-bit single-port distributed Read Only RAM      : 1
- 32x32-bit dual-port block Read Only RAM               : 1
+ 256x32-bit single-port block Read Only RAM            : 1
+ 32x32-bit dual-port block RAM                         : 1
 # Adders/Subtractors                                   : 4
  32-bit adder                                          : 3
  32-bit adder carry in                                 : 1
-# Registers                                            : 32
- Flip-Flops                                            : 32
-# Multiplexers                                         : 166
- 1-bit 2-to-1 multiplexer                              : 24
+# Registers                                            : 65
+ Flip-Flops                                            : 65
+# Multiplexers                                         : 391
+ 1-bit 2-to-1 multiplexer                              : 288
  1-bit 256-to-1 multiplexer                            : 32
  1-bit 32-to-1 multiplexer                             : 64
- 1-bit 7-to-1 multiplexer                              : 32
- 3-bit 2-to-1 multiplexer                              : 8
- 32-bit 2-to-1 multiplexer                             : 5
- 5-bit 2-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 4
+ 4-bit 2-to-1 multiplexer                              : 1
+ 5-bit 2-to-1 multiplexer                              : 2
 
 =========================================================================
 
@@ -8879,7 +8874,30 @@ Macro Statistics
 *                         Low Level Synthesis                           *
 =========================================================================
 WARNING:Xst:1710 - FF/Latch <Negative> (without init value) has a constant value of 0 in block <ALU>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:2973 - All outputs of instance <DataMemory> of block <dataMem> are unconnected in block <MIPS>. Underlying logic will be removed.
+WARNING:Xst:2677 - Node <Instruction_Fetch/PC/output_8> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <Instruction_Fetch/PC/output_9> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <Instruction_Fetch/PC/output_10> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <Instruction_Fetch/PC/output_11> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <Instruction_Fetch/PC/output_12> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <Instruction_Fetch/PC/output_13> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <Instruction_Fetch/PC/output_14> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <Instruction_Fetch/PC/output_15> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <Instruction_Fetch/PC/output_16> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <Instruction_Fetch/PC/output_17> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <Instruction_Fetch/PC/output_18> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <Instruction_Fetch/PC/output_19> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <Instruction_Fetch/PC/output_20> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <Instruction_Fetch/PC/output_21> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <Instruction_Fetch/PC/output_22> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <Instruction_Fetch/PC/output_23> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <Instruction_Fetch/PC/output_24> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <Instruction_Fetch/PC/output_25> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <Instruction_Fetch/PC/output_26> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <Instruction_Fetch/PC/output_27> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <Instruction_Fetch/PC/output_28> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <Instruction_Fetch/PC/output_29> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <Instruction_Fetch/PC/output_30> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <Instruction_Fetch/PC/output_31> of sequential type is unconnected in block <MIPS>.
 WARNING:Xst:3001 - This design contains one or more registers or latches with an active
    asynchronous set and asynchronous reset. While this circuit can be built,
    it creates a sub-optimal implementation in terms of area, power and
@@ -8897,52 +8915,32 @@ WARNING:Xst:3001 - This design contains one or more registers or latches with an
   Please refer to http://www.xilinx.com search string "Automotive Artix7 asynchronous set/reset" for more details.
 
   List of register instances with asynchronous set and reset:
+    ALUOP_3 in unit <ControlUnit>
     ALUOP_0 in unit <ControlUnit>
     ALUOP_1 in unit <ControlUnit>
-    ALUOP_3 in unit <ControlUnit>
     ALUOP_2 in unit <ControlUnit>
 
 
 Optimizing unit <MIPS> ...
+WARNING:Xst:2973 - All outputs of instance <ALUControl> of block <ALUCtrl> are unconnected in block <MIPS>. Underlying logic will be removed.
 WARNING:Xst:2973 - All outputs of instance <ALU_imp> of block <ALU> are unconnected in block <MIPS>. Underlying logic will be removed.
-WARNING:Xst:2677 - Node <Register_File/Mram_x_register> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2973 - All outputs of instance <DataMemory> of block <dataMem> are unconnected in block <MIPS>. Underlying logic will be removed.
+WARNING:Xst:2973 - All outputs of instance <DM_FF> of block <ff_32bit> are unconnected in block <MIPS>. Underlying logic will be removed.
+WARNING:Xst:2677 - Node <RF_FF/output> of sequential type is unconnected in block <MIPS>.
+WARNING:Xst:2677 - Node <RegisterFile/Mram_ram> of sequential type is unconnected in block <MIPS>.
 
-Optimizing unit <InstructionFetch> ...
+Optimizing unit <ControlUnit> ...
 
-Optimizing unit <program_counter> ...
-
-Optimizing unit <dataMem> ...
+Optimizing unit <ALUCtrl> ...
 
 Optimizing unit <ALU> ...
 
-Optimizing unit <ControlUnit> ...
-WARNING:Xst:2677 - Node <Instruction_Fetch/PC/output_31> of sequential type is unconnected in block <MIPS>.
-WARNING:Xst:2677 - Node <Instruction_Fetch/PC/output_30> of sequential type is unconnected in block <MIPS>.
-WARNING:Xst:2677 - Node <Instruction_Fetch/PC/output_29> of sequential type is unconnected in block <MIPS>.
-WARNING:Xst:2677 - Node <Instruction_Fetch/PC/output_28> of sequential type is unconnected in block <MIPS>.
-WARNING:Xst:2677 - Node <Instruction_Fetch/PC/output_27> of sequential type is unconnected in block <MIPS>.
-WARNING:Xst:2677 - Node <Instruction_Fetch/PC/output_26> of sequential type is unconnected in block <MIPS>.
-WARNING:Xst:2677 - Node <Instruction_Fetch/PC/output_25> of sequential type is unconnected in block <MIPS>.
-WARNING:Xst:2677 - Node <Instruction_Fetch/PC/output_24> of sequential type is unconnected in block <MIPS>.
-WARNING:Xst:2677 - Node <Instruction_Fetch/PC/output_23> of sequential type is unconnected in block <MIPS>.
-WARNING:Xst:2677 - Node <Instruction_Fetch/PC/output_22> of sequential type is unconnected in block <MIPS>.
-WARNING:Xst:2677 - Node <Instruction_Fetch/PC/output_21> of sequential type is unconnected in block <MIPS>.
-WARNING:Xst:2677 - Node <Instruction_Fetch/PC/output_20> of sequential type is unconnected in block <MIPS>.
-WARNING:Xst:2677 - Node <Instruction_Fetch/PC/output_19> of sequential type is unconnected in block <MIPS>.
-WARNING:Xst:2677 - Node <Instruction_Fetch/PC/output_18> of sequential type is unconnected in block <MIPS>.
-WARNING:Xst:2677 - Node <Instruction_Fetch/PC/output_17> of sequential type is unconnected in block <MIPS>.
-WARNING:Xst:2677 - Node <Instruction_Fetch/PC/output_16> of sequential type is unconnected in block <MIPS>.
-WARNING:Xst:2677 - Node <Instruction_Fetch/PC/output_15> of sequential type is unconnected in block <MIPS>.
-WARNING:Xst:2677 - Node <Instruction_Fetch/PC/output_14> of sequential type is unconnected in block <MIPS>.
-WARNING:Xst:2677 - Node <Instruction_Fetch/PC/output_13> of sequential type is unconnected in block <MIPS>.
-WARNING:Xst:2677 - Node <Instruction_Fetch/PC/output_12> of sequential type is unconnected in block <MIPS>.
-WARNING:Xst:2677 - Node <Instruction_Fetch/PC/output_11> of sequential type is unconnected in block <MIPS>.
-WARNING:Xst:2677 - Node <Instruction_Fetch/PC/output_10> of sequential type is unconnected in block <MIPS>.
-WARNING:Xst:2677 - Node <Instruction_Fetch/PC/output_9> of sequential type is unconnected in block <MIPS>.
-WARNING:Xst:2677 - Node <Instruction_Fetch/PC/output_8> of sequential type is unconnected in block <MIPS>.
+Optimizing unit <dataMem> ...
+
+Optimizing unit <ff_32bit> ...
+WARNING:Xst:2677 - Node <Control_Unit/ALUOP_3> of sequential type is unconnected in block <MIPS>.
 WARNING:Xst:2677 - Node <Control_Unit/ALUOP_0> of sequential type is unconnected in block <MIPS>.
 WARNING:Xst:2677 - Node <Control_Unit/ALUOP_1> of sequential type is unconnected in block <MIPS>.
-WARNING:Xst:2677 - Node <Control_Unit/ALUOP_3> of sequential type is unconnected in block <MIPS>.
 WARNING:Xst:2677 - Node <Control_Unit/ALUOP_2> of sequential type is unconnected in block <MIPS>.
 
 Mapping all equations...
@@ -8979,21 +8977,23 @@ Top Level Output File Name         : MIPS.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 110
+# BELS                             : 65
 #      GND                         : 1
 #      INV                         : 2
 #      LUT1                        : 7
-#      LUT2                        : 8
-#      LUT3                        : 11
-#      LUT4                        : 12
-#      LUT5                        : 11
-#      LUT6                        : 25
+#      LUT2                        : 6
+#      LUT3                        : 1
+#      LUT4                        : 2
+#      LUT5                        : 2
+#      LUT6                        : 12
 #      MUXCY                       : 12
-#      MUXF7                       : 6
+#      MUXF7                       : 5
 #      VCC                         : 1
 #      XORCY                       : 14
 # FlipFlops/Latches                : 8
 #      FDRE                        : 8
+# RAMS                             : 1
+#      RAMB18E1                    : 1
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 33
@@ -9008,14 +9008,14 @@ Selected Device : xa7a100tcsg324-2i
 
 Slice Logic Utilization: 
  Number of Slice Registers:               8  out of  126800     0%  
- Number of Slice LUTs:                   76  out of  63400     0%  
-    Number used as Logic:                76  out of  63400     0%  
+ Number of Slice LUTs:                   32  out of  63400     0%  
+    Number used as Logic:                32  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     76
-   Number with an unused Flip Flop:      68  out of     76    89%  
-   Number with an unused LUT:             0  out of     76     0%  
-   Number of fully used LUT-FF pairs:     8  out of     76    10%  
+ Number of LUT Flip Flop pairs used:     32
+   Number with an unused Flip Flop:      24  out of     32    75%  
+   Number with an unused LUT:             0  out of     32     0%  
+   Number of fully used LUT-FF pairs:     8  out of     32    25%  
    Number of unique control sets:         1
 
 IO Utilization: 
@@ -9023,6 +9023,8 @@ IO Utilization:
  Number of bonded IOBs:                  34  out of    210    16%  
 
 Specific Feature Utilization:
+ Number of Block RAM/FIFO:                1  out of    135     0%  
+    Number using Block RAM only:          1
  Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
 
 ---------------------------
@@ -9046,20 +9048,24 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 8     |
+clk                                | BUFGP                  | 9     |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
 ----------------------------------------
-No asynchronous control signals found in this design
+-----------------------------------+--------------------------------------------------+-------+
+Control Signal                     | Buffer(FF name)                                  | Load  |
+-----------------------------------+--------------------------------------------------+-------+
+N0(XST_GND:G)                      | NONE(Instruction_Fetch/InstrMem/Mram_instrctMem1)| 2     |
+-----------------------------------+--------------------------------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 3.700ns (Maximum Frequency: 270.281MHz)
-   Minimum input arrival time before clock: 1.225ns
-   Maximum output required time after clock: 2.365ns
+   Minimum period: 4.444ns (Maximum Frequency: 225.000MHz)
+   Minimum input arrival time before clock: 1.237ns
+   Maximum output required time after clock: 2.481ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -9068,75 +9074,66 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 3.700ns (frequency: 270.281MHz)
-  Total number of paths / destination ports: 2378 / 8
+  Clock period: 4.444ns (frequency: 225.000MHz)
+  Total number of paths / destination ports: 451 / 24
 -------------------------------------------------------------------------
-Delay:               3.700ns (Levels of Logic = 10)
-  Source:            Instruction_Fetch/PC/output_3 (FF)
-  Destination:       Instruction_Fetch/PC/output_7 (FF)
+Delay:               4.444ns (Levels of Logic = 3)
+  Source:            Instruction_Fetch/InstrMem/Mram_instrctMem1 (RAM)
+  Destination:       Instruction_Fetch/PC/output_2 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: Instruction_Fetch/PC/output_3 to Instruction_Fetch/PC/output_7
+  Data Path: Instruction_Fetch/InstrMem/Mram_instrctMem1 to Instruction_Fetch/PC/output_2
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q            25   0.361   0.745  Instruction_Fetch/PC/output_3 (Instruction_Fetch/PC/output_3)
-     LUT4:I0->O            1   0.097   0.355  Instruction_Fetch_InstrMem/Mram_instrctMem1211_SW0 (Instruction_Fetch_N2)
-     LUT5:I4->O            3   0.097   0.451  Instruction_Fetch_InstrMem/Mram_instrctMem1211 (instruction_0_OBUF)
-     LUT2:I0->O            1   0.097   0.000  Instruction_Fetch/Branch_Adder/Madd_result_lut<2> (Instruction_Fetch/Branch_Adder/Madd_result_lut<2>)
-     MUXCY:S->O            1   0.353   0.000  Instruction_Fetch/Branch_Adder/Madd_result_cy<2> (Instruction_Fetch/Branch_Adder/Madd_result_cy<2>)
-     MUXCY:CI->O           1   0.023   0.000  Instruction_Fetch/Branch_Adder/Madd_result_cy<3> (Instruction_Fetch/Branch_Adder/Madd_result_cy<3>)
-     MUXCY:CI->O           1   0.023   0.000  Instruction_Fetch/Branch_Adder/Madd_result_cy<4> (Instruction_Fetch/Branch_Adder/Madd_result_cy<4>)
-     MUXCY:CI->O           1   0.023   0.000  Instruction_Fetch/Branch_Adder/Madd_result_cy<5> (Instruction_Fetch/Branch_Adder/Madd_result_cy<5>)
-     MUXCY:CI->O           0   0.023   0.000  Instruction_Fetch/Branch_Adder/Madd_result_cy<6> (Instruction_Fetch/Branch_Adder/Madd_result_cy<6>)
-     XORCY:CI->O           1   0.370   0.339  Instruction_Fetch/Branch_Adder/Madd_result_xor<7> (Instruction_Fetch/branch_adder_output<7>)
-     MUXF7:S->O            1   0.335   0.000  Instruction_Fetch/HALT_MUX/Mmux_output302 (Instruction_Fetch/PC_mux_output<7>)
-     FDRE:D                    0.008          Instruction_Fetch/PC/output_7
+     RAMB18E1:CLKARDCLK->DOBDO12    4   2.125   0.770  Instruction_Fetch/InstrMem/Mram_instrctMem1 (instruction_28_OBUF)
+     LUT6:I0->O           13   0.097   0.811  Control_Unit/Jump<5>1 (jump_vld)
+     LUT5:I0->O            1   0.097   0.439  mux101122_F (N22)
+     LUT3:I1->O            1   0.097   0.000  mux1011221 (Instruction_Fetch/PC_mux_output<2>)
+     FDRE:D                    0.008          Instruction_Fetch/PC/output_2
     ----------------------------------------
-    Total                      3.700ns (1.810ns logic, 1.890ns route)
-                                       (48.9% logic, 51.1% route)
+    Total                      4.444ns (2.424ns logic, 2.020ns route)
+                                       (54.5% logic, 45.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 16 / 16
+  Total number of paths / destination ports: 18 / 18
 -------------------------------------------------------------------------
-Offset:              1.225ns (Levels of Logic = 2)
+Offset:              1.237ns (Levels of Logic = 2)
   Source:            reset (PAD)
-  Destination:       Instruction_Fetch/PC/output_7 (FF)
+  Destination:       Instruction_Fetch/PC/output_0 (FF)
   Destination Clock: clk rising
 
-  Data Path: reset to Instruction_Fetch/PC/output_7
+  Data Path: reset to Instruction_Fetch/PC/output_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             9   0.001   0.384  reset_IBUF (reset_IBUF)
-     INV:I->O              8   0.113   0.378  Instruction_Fetch/PC/_n00091_INV_0 (Instruction_Fetch/PC/_n0009)
+     IBUF:I->O            11   0.001   0.395  reset_IBUF (reset_IBUF)
+     INV:I->O              8   0.113   0.378  RF_FF/reset_inv1_INV_0 (RF_FF/reset_inv)
      FDRE:R                    0.349          Instruction_Fetch/PC/output_0
     ----------------------------------------
-    Total                      1.225ns (0.463ns logic, 0.762ns route)
-                                       (37.8% logic, 62.2% route)
+    Total                      1.237ns (0.463ns logic, 0.773ns route)
+                                       (37.4% logic, 62.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 230 / 29
+  Total number of paths / destination ports: 32 / 32
 -------------------------------------------------------------------------
-Offset:              2.365ns (Levels of Logic = 3)
-  Source:            Instruction_Fetch/PC/output_2 (FF)
-  Destination:       instruction<15> (PAD)
+Offset:              2.481ns (Levels of Logic = 1)
+  Source:            Instruction_Fetch/InstrMem/Mram_instrctMem1 (RAM)
+  Destination:       instruction<31> (PAD)
   Source Clock:      clk rising
 
-  Data Path: Instruction_Fetch/PC/output_2 to instruction<15>
+  Data Path: Instruction_Fetch/InstrMem/Mram_instrctMem1 to instruction<31>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q            25   0.361   0.699  Instruction_Fetch/PC/output_2 (Instruction_Fetch/PC/output_2)
-     LUT3:I0->O            1   0.097   0.743  Instruction_Fetch_InstrMemOut<7>_SW0 (Instruction_Fetch_N14)
-     LUT6:I1->O            6   0.097   0.367  Instruction_Fetch_InstrMemOut<7> (instruction_10_OBUF)
-     OBUF:I->O                 0.000          instruction_10_OBUF (instruction<10>)
+     RAMB18E1:CLKARDCLK->DOBDO15    4   2.125   0.356  Instruction_Fetch/InstrMem/Mram_instrctMem1 (instruction_31_OBUF)
+     OBUF:I->O                 0.000          instruction_31_OBUF (instruction<31>)
     ----------------------------------------
-    Total                      2.365ns (0.555ns logic, 1.810ns route)
-                                       (23.5% logic, 76.5% route)
+    Total                      2.481ns (2.125ns logic, 0.356ns route)
+                                       (85.6% logic, 14.4% route)
 
 =========================================================================
 
@@ -9148,20 +9145,20 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    3.700|         |         |         |
+clk            |    4.444|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 134.00 secs
-Total CPU time to Xst completion: 134.32 secs
+Total REAL time to Xst completion: 128.00 secs
+Total CPU time to Xst completion: 128.46 secs
  
 --> 
 
-Total memory usage is 930488 kilobytes
+Total memory usage is 946920 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings : 8390 (   0 filtered)
+Number of warnings : 8391 (   0 filtered)
 Number of infos    :    3 (   0 filtered)
 

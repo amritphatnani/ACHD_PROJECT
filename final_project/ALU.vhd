@@ -146,14 +146,15 @@ else zero<='0'; end if;
 											end case;
 
 			
-			when others => ALUOutput <= "00000000000000000000000000000000";
+			when others => ALUOutput <= AluOutput;
+
 			
 			end case;
 			end if;
+--			AluResult <= ALUOutput;
 			--end if;
 			
 end process;		
 AluResult <= ALUOutput;
-
 end Behavioral;
 

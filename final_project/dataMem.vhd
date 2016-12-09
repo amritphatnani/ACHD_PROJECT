@@ -75,13 +75,11 @@ begin
 
 process (memRead, memWrite, addr, dataWrite)
 begin
-if(clk'event and clk = '1') then
 if (memRead = '1' AND memWrite = '0') then
 	dataRead <= dataMem(CONV_INTEGER(addr(7 DOWNTO 0)));
 elsif (memWrite = '1' AND memRead = '0') then 
 	dataMem(CONV_INTEGER(addr(7 DOWNTO 0))) <= dataWrite;
 else NULL;
-end if;
 end if;
 end process;
 

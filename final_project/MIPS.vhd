@@ -19,6 +19,7 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_unsigned.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -85,17 +86,25 @@ Port( ALUCtr : in std_logic_vector(3 downto 0);
 		reset  : in std_logic);
 end Component;
 
-component registerFile is
-Port ( read1 : in  STD_LOGIC_VECTOR (4 downto 0);
-			  read2 : in  STD_LOGIC_VECTOR (4 downto 0);
-			  write_register : in STD_LOGIC_VECTOR ( 4 downto 0);
-			  write_data : in STD_LOGIC_VECTOR (31 downto 0);
-			  read_data1 : out STD_LOGIC_VECTOR (31 downto 0);
-			  read_data2 : out STD_LOGIC_VECTOR (31 downto 0);
-			  clk : in std_logic;
-			  reset: in std_logic;
-			  regWrite: in std_logic
-			  );
+component register_file is
+generic 
+	(
+		DATA_WIDTH : natural := 32
+	);
+
+	port 
+	(
+		clk		: in std_logic;
+		addr_a	: in std_logic_vector(4 downto 0);
+		addr_b	: in std_logic_vector(4 downto 0);
+		wrt_addr : in std_logic_vector(4 downto 0);
+		--data_a	: in std_logic_vector((DATA_WIDTH-1) downto 0);
+		wrt_data	: in std_logic_vector((DATA_WIDTH-1) downto 0);
+		--we_a	: in std_logic := '1';
+		we_b	: in std_logic := '1';
+		q_a		: out std_logic_vector((DATA_WIDTH -1) downto 0);
+		q_b		: out std_logic_vector((DATA_WIDTH -1) downto 0)
+	);
 end component;
 
 component signExt is
@@ -119,14 +128,27 @@ component mux_2_1 is
            output : out  STD_LOGIC_VECTOR (31 downto 0));
 end component;
 
---component mux_clk_2_1 is
---    Port ( input1 : in  STD_LOGIC_VECTOR (31 downto 0);
---           input2 : in  STD_LOGIC_VECTOR (31 downto 0);
---           sel : in  STD_LOGIC;
---           output : out  STD_LOGIC_VECTOR (31 downto 0);
---			  clk: in STD_logic;
---			  reset: in std_logic);
---end component;
+component ff_32bit is
+    Port ( input : in  STD_LOGIC_VECTOR (31 downto 0);
+           clk : in  STD_LOGIC;
+           reset : in  STD_LOGIC;
+           output : out  STD_LOGIC_VECTOR (31 downto 0));
+end component;
+
+component ff_5bit is
+    Port ( input : in  STD_LOGIC_VECTOR (4 downto 0);
+           clk : in  STD_LOGIC;
+           reset : in  STD_LOGIC;
+           output : out  STD_LOGIC_VECTOR (4 downto 0));
+end component;
+
+component ff_1bit is
+    Port ( input : in  STD_LOGIC;
+           clk : in  STD_LOGIC;
+           reset : in  STD_LOGIC;
+           output : out  STD_LOGIC);
+end component;
+
 
 component mux_5bits is
 Port ( input1 : in  STD_LOGIC_VECTOR (4 downto 0);
@@ -134,6 +156,7 @@ Port ( input1 : in  STD_LOGIC_VECTOR (4 downto 0);
            sel : in  STD_LOGIC;
            output : out  STD_LOGIC_VECTOR (4 downto 0));
 end component;
+
 	--Instruction Fetch Signal
 	signal jump_vld: std_logic;
 	signal branch_vld: std_logic;
@@ -168,6 +191,7 @@ end component;
 	
 	--Register File MUX signals
 	signal RF_MUX_output: std_logic_vector(4 downto 0);
+	signal RT_MUX_output: std_logic_vector(4 downto 0);
 	
 	--Data Memory Signals
 	signal dataMem_output: std_logic_vector(31 downto 0);
@@ -175,50 +199,14 @@ end component;
 	--Data Memory MUX signals
 	signal DM_MUX_output: std_logic_vector(31 downto 0);
 	
+	--FF signals
+	signal ff_5: std_logic_vector(4 downto 0);
+	signal ff_32 : std_logic_vector(31 downto 0);
+	signal ff_1: std_logic;
+	
 	
 	
 begin
---process(clk, reset) begin
---if (clk ='1' and clk'event) then
---	if(reset ='0')then
---jump_vld <='0';
---branch_vld <='0';
---halt_vld <='0';
---instr <= X"00000000";
---ALUop <="0000";
---Branch <='0';
---RegDst <='0';
---ALUSrc <='0';
---MemToReg <='0';
---RegWrite <='0';
---MemRead <='0';
---MemWrite <='0';
---ALUCtr <= "0000";
---RegData1 <= X"00000000";
---RegData2 <= X"00000000";
---Zero <='0';
---negative <='0';
---ALU_result <= X"00000000";
---
---
---alu_mux_output <= X"00000000";
---
---
---sign_extended <= X"00000000";
---
---
---RF_MUX_output <= "00000";
---
---
---dataMem_output <= X"00000000";
---
---
---DM_MUX_output <= X"00000000";
---end if;
---end if;
---end process;
-
-
 
 Sign_Extension : signExt PORT MAP(instr(15 downto 0), sign_extended);
 
@@ -228,7 +216,7 @@ branch_vld <= (branch and zero) or (branch and (not zero)) or (branch and ((not 
 
 Control_Unit: ControlUnit PORT MAP(instr(31 downto 26), clk, reset, ALUOp, RegDst, Branch, MemRead, MemToReg, MemWrite, ALUsrc, RegWrite, jump_vld, halt_vld);
 
-Register_File: RegisterFile PORT MAP(instr(25 downto 21), instr(20 downto 16), RF_mux_output, DM_MUX_output, RegData1, RegData2, clk, reset, RegWrite);
+RegisterFile: Register_File PORT MAP(clk,instr(25 downto 21),instr(20 downto 16),ff_5, ff_32, ff_1, RegData1, RegData2);
 
 ALUControl : ALUCtrl PORT MAP(AluOp, instr(5 downto 0), ALUctr, clk, reset);
 
@@ -238,9 +226,17 @@ DataMemory: DataMem PORT MAP(clk, memRead, MemWrite, Alu_result, dataMem_output,
 
 RFMux: mux_5bits Port Map(instr(20 downto 16), instr(15 downto 11), RegDst, RF_MUX_Output);
 
+--RTMux: mux_5bits Port MAP(instr(20 downto 16), RF_MUX_Output, ff_1, RT_mux_output);
+
+RF_FF: ff_1bit port map(RegWrite, clk, reset, ff_1);
+
+DestReg_FF: ff_5bit port map(RF_MUX_Output,clk, reset, ff_5);
+
 ALUMUX: mux_2_1 PORT MAP(regData2, sign_extended, Alusrc, alu_mux_output);
 
 DMMux: mux_2_1 PORT MAP(Alu_result, dataMem_output, MemToReg, DM_mux_output);
+
+DM_FF: ff_32bit port map(DM_mux_output, clk, reset, ff_32);
 
 instruction <= instr;
 

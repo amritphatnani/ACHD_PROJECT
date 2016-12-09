@@ -66,23 +66,30 @@ begin
 --register1 <= x_register(to_integer(unsigned(read1(4 downto 0))));
 --register2 <= x_register(to_integer(unsigned(read2(4 downto 0))));
 
-process(clk, reset,read1, read2) begin
-if(clk'event and clk = '1') then
+process(clk, reset,read1) begin
+if(clk'event and clk = '0') then
 	if(reset = '1') then 
 	read_data1 <= x_register(conv_integer(read1(4 downto 0)));
-	read_data2 <= x_register(conv_integer(read2(4 downto 0)));
-	elsif(reset = '0') then
-	read_data1 <= X"00000000";
-	read_data2 <= X"00000000";
 	end if;
 end if;
 end process;
-process(clk, reset, regWrite, write_register, write_data) begin
+
+process(clk, reset, read2) begin
 if(clk'event and clk = '0') then
+	if(reset = '1') then 
+	read_data2 <= x_register(conv_integer(read2(4 downto 0)));
+	end if;
+end if;
+end process;
+
+process(clk, reset,write_register, regWrite) begin
+if(clk'event and clk = '1') then
+	if(reset = '1') then 
 	if(regWrite = '1') then
 		x_register(conv_integer(write_register(4 downto 0)))<= write_data; 
 		end if;
-		end if;
+	end if;
+end if;
 end process;
 
 end Behavioral;

@@ -1,0 +1,2 @@
+vhdl isim_temp "dataMem.vhd"
+vhdl isim_temp "mux_clk_2_1.vhd"
