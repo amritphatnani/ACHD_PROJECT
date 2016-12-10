@@ -1,0 +1,40 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/amrit/Documents/GitHub/ACHD_PROJECT/NYU_6463_Processor/MIPS_isim_par.exe -prj C:/Users/amrit/Documents/GitHub/ACHD_PROJECT/NYU_6463_Processor/MIPS_par.prj work.MIPS 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/amrit/Documents/GitHub/ACHD_PROJECT/NYU_6463_Processor/netgen/par/MIPS_timesim.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package textio
+Compiling package vital_timing
+Compiling package vcomponents
+Compiling package vital_primitives
+Compiling package vpackage
+Compiling package std_logic_textio
+Compiling architecture x_buf_v of entity X_BUF [\X_BUF(true,true,"UNPLACED",(0,0...]
+Compiling architecture x_lut6_v of entity X_LUT6 [\X_LUT6(true,true,"UNPLACED",(0,...]
+Compiling architecture x_lut5_v of entity X_LUT5 [\X_LUT5(true,true,"UNPLACED",(0,...]
+Compiling architecture x_zero_v of entity X_ZERO [\X_ZERO("UNPLACED")(1,8)\]
+Compiling architecture x_carry4_v of entity X_CARRY4 [\X_CARRY4(true,"*",true,true,"UN...]
+Compiling architecture x_ckbuf_v of entity X_CKBUF [\X_CKBUF(true,true,"UNPLACED",(0...]
+Compiling package std_logic_arith
+Compiling package std_logic_signed
+Compiling architecture x_rb18_internal_vhdl_v of entity X_RB18_INTERNAL_VHDL [\X_RB18_INTERNAL_VHDL(18,0,0,fal...]
+Compiling architecture x_ramb18e1_v of entity X_RAMB18E1 [\X_RAMB18E1(true,"*",true,true,0...]
+Compiling architecture x_ibuf_intermdisable_tpwrgt_v of entity X_IBUF_INTERMDISABLE_TPWRGT [\X_IBUF_INTERMDISABLE_TPWRGT("TR...]
+Compiling architecture x_obuf_v of entity X_OBUF [\X_OBUF(true,true,"DONT_CARE",12...]
+Compiling architecture x_mux2_v of entity X_MUX2 [\X_MUX2(true,true,"UNPLACED",(0,...]
+Compiling architecture x_sff_v of entity X_SFF [\X_SFF(true,true,true,"UNPLACED"...]
+Compiling architecture x_roc_v of entity X_ROC [\X_ROC("UNPLACED",100000,"*")(1,...]
+Compiling architecture x_toc_v of entity X_TOC [\X_TOC("UNPLACED",0,"*")(1,8,1,1...]
+Compiling architecture structure of entity mips
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+WARNING:Simulator - Unable to copy libPortabilityNOSH.dll to the simulation executable directory: boost::filesystem::copy_file: The system cannot find the path specified, "isim\MIPS_isim_par.exe.sim\libPortability.dll".
+Compiled 191 VHDL Units
+Built simulation executable C:/Users/amrit/Documents/GitHub/ACHD_PROJECT/NYU_6463_Processor/MIPS_isim_par.exe
+Fuse Memory Usage: 111636 KB
+Fuse CPU Usage: 2405 ms

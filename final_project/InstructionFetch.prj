@@ -1,6 +1,0 @@
-vhdl work "ShiftLeft2.vhd"
-vhdl work "program_counter.vhd"
-vhdl work "mux_2_1.vhd"
-vhdl work "memInstruction.vhd"
-vhdl work "Adder.vhd"
-vhdl work "InstructionFetch.vhd"
