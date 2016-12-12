@@ -17,6 +17,8 @@ entity ControlUnit is
 				ALUOP: out STD_LOGIC_VECTOR (3 downto 0);
 				RegDst: out STD_LOGIC;
 				Branch : out STD_LOGIC;
+				BranchNE: out STD_Logic;
+				BranchLT: out STD_LOGIC;
 				MemRead: out std_logic;
 				MemtoReg: out std_logic;
 				MemWrite: out std_logic;
@@ -47,8 +49,9 @@ Halt <= '1' when opcode = "111111" else '0';
 
 
 Itype <= ADDI or SUBI or ORI or ANDI or SHL or SHR;
-BRN <= BEQ or BNE;
-Branch <= brn;
+Branch <= BEQ;
+BranchNE <= BNE;
+BranchLT <= BLT;
 ALUSrc <= LW or SW or Itype;
 MemRead <= LW;
 MemWrite <= SW;
@@ -56,12 +59,12 @@ RegWrite <= Rtype or LW or Itype;
 RegDst <= Rtype;
 MemtoReg <= LW;
 
-process(rtype,brn,blt, hlt,sw,lw,addi,subi,andi,ori,shl,shr,hlt) begin 
+process(rtype,beq,bne,blt, hlt,sw,lw,addi,subi,andi,ori,shl,shr,hlt) begin 
 if(SW ='1' or LW = '1') then
 Aluop <= "0000";
 elsif(Rtype ='1') then
 ALUop <= "0010";
-elsif(BRN ='1') then
+elsif(beq='1' or bne='1') then
 ALUop <= "0001";
 elsif(BLT = '1') then
 ALUop <= "0011";

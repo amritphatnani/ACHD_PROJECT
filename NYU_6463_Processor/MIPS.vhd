@@ -39,6 +39,8 @@ component ControlUnit is
 				ALUOP: out STD_LOGIC_VECTOR (3 downto 0);
 				RegDst: out STD_LOGIC;
 				Branch : out STD_LOGIC;
+				BranchNE: out STD_Logic;
+				BranchLT: out STD_LOGIC;
 				MemRead: out std_logic;
 				MemtoReg: out std_logic;
 				MemWrite: out std_logic;
@@ -145,6 +147,8 @@ end component;
 	--Control Unit Signals
 	signal ALUop: std_logic_vector(3 downto 0);
 	signal Branch: std_logic;
+	signal BranchNE: STD_Logic;
+	signal BranchLT: STD_LOGIC;
 	signal RegDst: std_logic;
 	signal ALUSrc: std_logic;
 	signal MemToReg: std_logic;
@@ -190,9 +194,9 @@ Sign_Extension : signExt PORT MAP(instr(15 downto 0), sign_extended);
 
 Instruction_Fetch: InstructionFetch PORT MAP(sign_extended, jump_vld, branch_vld, halt_vld, clk, reset, instr);
 
-branch_vld <= (branch and zero) or (branch and (not zero)) or (branch and ((not zero) and negative));
+branch_vld <= (Branch and zero) or (BranchNE and (not zero)) or (branchLT and ((not zero) and negative));
 
-Control_Unit: ControlUnit PORT MAP(instr(31 downto 26), clk, reset, ALUOp, RegDst, Branch, MemRead, MemToReg, MemWrite, ALUsrc, RegWrite, jump_vld, halt_vld);
+Control_Unit: ControlUnit PORT MAP(instr(31 downto 26), clk, reset, ALUOp, RegDst, Branch, BranchNE, BranchLT, MemRead, MemToReg, MemWrite, ALUsrc, RegWrite, jump_vld, halt_vld);
 
 RegisterFile: Register_File PORT MAP(clk,instr(25 downto 21),instr(20 downto 16),ff_5, ff_32, ff_1, RegData1, RegData2);
 

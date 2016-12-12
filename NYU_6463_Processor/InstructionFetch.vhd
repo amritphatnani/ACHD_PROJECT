@@ -95,9 +95,9 @@ jump_address <= pc_adder_output(31 downto 28) & jump_shift_output(27 downto 0);
 
 Jump_mux : mux_2_1 PORT MAP(branch_address, jump_address, jump, PC_next);
 
-Branch_Shift: ShiftLeft2 PORT MAP(branch_in, branch_shift_output);
+--Branch_Shift: ShiftLeft2 PORT MAP(branch_in, branch_shift_output);
 
-Branch_Adder: Adder PORT MAP(branch_shift_output, pc_adder_output, branch_adder_output);
+Branch_Adder: Adder PORT MAP(branch_in, pc_adder_output, branch_adder_output);
 
 Branch_MUX: mux_2_1 PORT MAP(pc_adder_output, branch_adder_output, branch, branch_address);
 

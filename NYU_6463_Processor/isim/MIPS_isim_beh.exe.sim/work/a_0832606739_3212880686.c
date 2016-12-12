@@ -29,7 +29,7 @@ char *ieee_p_2592010699_sub_1306069469_503743352(char *, char *, char *, char *,
 char *ieee_p_2592010699_sub_1735675855_503743352(char *, char *, char *, char *, char *, char *);
 char *ieee_p_2592010699_sub_1837678034_503743352(char *, char *, char *, char *);
 char *ieee_p_2592010699_sub_795620321_503743352(char *, char *, char *, char *, char *, char *);
-unsigned char ieee_p_3620187407_sub_2546382208_3965413181(char *, char *, char *, int );
+unsigned char ieee_p_3620187407_sub_3890342512_3965413181(char *, char *, char *, int );
 char *ieee_p_3620187407_sub_436279890_3965413181(char *, char *, char *, char *, int );
 char *ieee_p_3620187407_sub_767668596_3965413181(char *, char *, char *, char *, char *, char *);
 char *ieee_p_3620187407_sub_767740470_3965413181(char *, char *, char *, char *, char *, char *);
@@ -406,7 +406,7 @@ LAB14:    xsi_set_current_line(50, ng0);
     t6 = *((char **)t5);
     t5 = (t0 + 6972U);
     t7 = ieee_p_3620187407_sub_767740470_3965413181(IEEE_P_3620187407, t8, t2, t1, t6, t5);
-    t3 = ieee_p_3620187407_sub_2546382208_3965413181(IEEE_P_3620187407, t7, t8, 0);
+    t3 = ieee_p_3620187407_sub_3890342512_3965413181(IEEE_P_3620187407, t7, t8, 0);
     if (t3 != 0)
         goto LAB37;
 
