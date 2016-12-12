@@ -1,0 +1,5 @@
+vhdl work "rc5Package.vhd"
+vhdl work "rc5_encrypt.vhd"
+vhdl work "rc5_decryption.vhd"
+vhdl work "key_expansion.vhd"
+vhdl work "rc5.vhd"

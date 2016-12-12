@@ -1,0 +1,33 @@
+Command line:
+   MIPS_isim_par.exe
+     -simmode  gui
+     -sdfmax  /MIPS/=netgen/par/MIPS_timesim.sdf
+     -sdfroot  /
+     -simrunnum  1
+     -socket  60762
+
+Fri Dec 09 19:33:01 2016
+
+
+ Elaboration Time: 0.171875 sec
+
+ Current Memory Usage: 859.607 Meg
+
+ Total Signals          : 1846
+ Total Nets             : 2875
+ Total Signal Drivers   : 1090
+ Total Blocks           : 544
+ Total Primitive Blocks : 364
+ Total Processes        : 1048
+ Total Traceable Variables  : 2674
+ Total Scalar Nets and Variables : 74486
+Total Line Count : 3645
+
+ Total Simulation Time: 0.75 sec
+
+ Current Memory Usage: 702.321 Meg
+
+Fri Dec 09 19:37:08 2016
+
+
+

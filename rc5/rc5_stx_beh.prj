@@ -1,0 +1,5 @@
+vhdl isim_temp "rc5Package.vhd"
+vhdl isim_temp "rc5_encrypt.vhd"
+vhdl isim_temp "rc5_decryption.vhd"
+vhdl isim_temp "key_expansion.vhd"
+vhdl isim_temp "rc5.vhd"

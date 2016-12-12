@@ -1,0 +1,941 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml rc5.twx rc5.ncd -o rc5.twr rc5.pcf -ucf rc5_ucf.ucf
+
+Design file:              rc5.ncd
+Physical constraint file: rc5.pcf
+Device,package,speed:     xc7a100t,csg324,C,-3 (PRODUCTION 1.10 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 90 MHz HIGH 
+50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 6721058550 paths analyzed, 6783 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  11.086ns.
+--------------------------------------------------------------------------------
+
+Paths for end point keyExp/b_reg_7 (SLICE_X55Y80.A4), 15718427 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.025ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               keyExp/k_cnt_0 (FF)
+  Destination:          keyExp/b_reg_7 (FF)
+  Requirement:          11.111ns
+  Data Path Delay:      10.933ns (Levels of Logic = 18)
+  Clock Path Skew:      -0.118ns (1.019 - 1.137)
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 11.111ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: keyExp/k_cnt_0 to keyExp/b_reg_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X38Y54.AQ      Tcko                  0.393   keyExp/k_cnt<3>
+                                                       keyExp/k_cnt_0
+    SLICE_X33Y49.A2      net (fanout=279)      1.206   keyExp/k_cnt<0>
+    SLICE_X33Y49.A       Tilo                  0.097   keyExp/mux22_8
+                                                       keyExp/mux22_81
+    SLICE_X33Y49.D1      net (fanout=1)        0.492   keyExp/mux22_81
+    SLICE_X33Y49.CMUX    Topdc                 0.408   keyExp/mux22_8
+                                                       keyExp/mux22_4
+                                                       keyExp/mux22_2_f7
+    SLICE_X40Y59.C3      net (fanout=1)        0.852   keyExp/n0459<2>
+    SLICE_X40Y59.CMUX    Tilo                  0.257   keyExp/a_tmp1<3>
+                                                       keyExp/Madd_a_tmp12
+    SLICE_X40Y59.D3      net (fanout=2)        0.454   keyExp/Madd_a_tmp12
+    SLICE_X40Y59.COUT    Topcyd                0.396   keyExp/a_tmp1<3>
+                                                       keyExp/Madd_a_tmp1_lut<0>3
+                                                       keyExp/Madd_a_tmp1_cy<0>_2
+    SLICE_X40Y60.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>3
+    SLICE_X40Y60.COUT    Tbyp                  0.089   keyExp/a_tmp1<7>
+                                                       keyExp/Madd_a_tmp1_cy<0>_6
+    SLICE_X40Y61.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>7
+    SLICE_X40Y61.COUT    Tbyp                  0.089   keyExp/a_tmp1<11>
+                                                       keyExp/Madd_a_tmp1_cy<0>_10
+    SLICE_X40Y62.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>11
+    SLICE_X40Y62.COUT    Tbyp                  0.089   keyExp/a_tmp1<15>
+                                                       keyExp/Madd_a_tmp1_cy<0>_14
+    SLICE_X40Y63.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>15
+    SLICE_X40Y63.COUT    Tbyp                  0.089   keyExp/a_tmp1<19>
+                                                       keyExp/Madd_a_tmp1_cy<0>_18
+    SLICE_X40Y64.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>19
+    SLICE_X40Y64.COUT    Tbyp                  0.089   keyExp/a_tmp1<23>
+                                                       keyExp/Madd_a_tmp1_cy<0>_22
+    SLICE_X40Y65.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>23
+    SLICE_X40Y65.COUT    Tbyp                  0.089   keyExp/a_tmp1<27>
+                                                       keyExp/Madd_a_tmp1_cy<0>_26
+    SLICE_X40Y66.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>27
+    SLICE_X40Y66.BQ      Tito_logic            0.481   keyExp/a_tmp1<29>
+                                                       keyExp/Madd_a_tmp1_xor<0>_30
+                                                       keyExp/a_tmp1<29>_rt
+    SLICE_X46Y71.A6      net (fanout=29)       0.580   keyExp/a_tmp1<29>
+    SLICE_X46Y71.COUT    Topcya                0.476   keyExp/Madd_ab_tmp_cy<3>
+                                                       keyExp/Madd_ab_tmp_lut<0>
+                                                       keyExp/Madd_ab_tmp_cy<3>
+    SLICE_X46Y72.CIN     net (fanout=1)        0.000   keyExp/Madd_ab_tmp_cy<3>
+    SLICE_X46Y72.CMUX    Tcinc                 0.300   keyExp/Madd_ab_tmp_cy<7>
+                                                       keyExp/Madd_ab_tmp_cy<7>
+    SLICE_X48Y74.C6      net (fanout=2)        0.606   keyExp/ab_tmp<6>
+    SLICE_X48Y74.COUT    Topcyc                0.398   keyExp/Madd_b_tmp1_cy<7>
+                                                       keyExp/Madd_b_tmp1_lut<6>
+                                                       keyExp/Madd_b_tmp1_cy<7>
+    SLICE_X48Y75.CIN     net (fanout=1)        0.007   keyExp/Madd_b_tmp1_cy<7>
+    SLICE_X48Y75.AMUX    Tcina                 0.286   keyExp/Madd_b_tmp1_cy<11>
+                                                       keyExp/Madd_b_tmp1_cy<11>
+    SLICE_X47Y75.B4      net (fanout=4)        0.911   keyExp/b_tmp1<8>
+    SLICE_X47Y75.B       Tilo                  0.097   N138
+                                                       keyExp/ab_tmp<1>51
+    SLICE_X51Y79.D3      net (fanout=6)        0.826   keyExp/ab_tmp<1>_mmx_out13
+    SLICE_X51Y79.D       Tilo                  0.097   keyExp/ab_tmp<3>_mmx_out11
+                                                       keyExp/ab_tmp<3>31
+    SLICE_X55Y80.A4      net (fanout=10)       0.712   keyExp/ab_tmp<3>_mmx_out11
+    SLICE_X55Y80.CLK     Tas                   0.067   keyExp/b_reg<7>
+                                                       keyExp/Mmux_b_tmp2301
+                                                       keyExp/b_reg_7
+    -------------------------------------------------  ---------------------------
+    Total                                     10.933ns (4.287ns logic, 6.646ns route)
+                                                       (39.2% logic, 60.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.076ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               keyExp/i_cnt_2 (FF)
+  Destination:          keyExp/b_reg_7 (FF)
+  Requirement:          11.111ns
+  Data Path Delay:      10.881ns (Levels of Logic = 16)
+  Clock Path Skew:      -0.119ns (1.019 - 1.138)
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 11.111ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: keyExp/i_cnt_2 to keyExp/b_reg_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X35Y54.CMUX    Tshcko                0.428   keyExp/i_cnt<4>
+                                                       keyExp/i_cnt_2
+    SLICE_X37Y48.D2      net (fanout=92)       1.620   keyExp/i_cnt<2>
+    SLICE_X37Y48.CMUX    Topdc                 0.408   keyExp/s_arr_tmp_15<4>
+                                                       keyExp/mux25_4
+                                                       keyExp/mux25_2_f7
+    SLICE_X40Y59.D4      net (fanout=1)        0.800   keyExp/n0459<3>
+    SLICE_X40Y59.DMUX    Tilo                  0.259   keyExp/a_tmp1<3>
+                                                       keyExp/Madd_a_tmp13
+    SLICE_X40Y60.A3      net (fanout=2)        0.585   keyExp/Madd_a_tmp13
+    SLICE_X40Y60.COUT    Topcya                0.492   keyExp/a_tmp1<7>
+                                                       keyExp/Madd_a_tmp1_lut<0>4
+                                                       keyExp/Madd_a_tmp1_cy<0>_6
+    SLICE_X40Y61.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>7
+    SLICE_X40Y61.COUT    Tbyp                  0.089   keyExp/a_tmp1<11>
+                                                       keyExp/Madd_a_tmp1_cy<0>_10
+    SLICE_X40Y62.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>11
+    SLICE_X40Y62.COUT    Tbyp                  0.089   keyExp/a_tmp1<15>
+                                                       keyExp/Madd_a_tmp1_cy<0>_14
+    SLICE_X40Y63.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>15
+    SLICE_X40Y63.COUT    Tbyp                  0.089   keyExp/a_tmp1<19>
+                                                       keyExp/Madd_a_tmp1_cy<0>_18
+    SLICE_X40Y64.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>19
+    SLICE_X40Y64.COUT    Tbyp                  0.089   keyExp/a_tmp1<23>
+                                                       keyExp/Madd_a_tmp1_cy<0>_22
+    SLICE_X40Y65.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>23
+    SLICE_X40Y65.COUT    Tbyp                  0.089   keyExp/a_tmp1<27>
+                                                       keyExp/Madd_a_tmp1_cy<0>_26
+    SLICE_X40Y66.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>27
+    SLICE_X40Y66.BQ      Tito_logic            0.481   keyExp/a_tmp1<29>
+                                                       keyExp/Madd_a_tmp1_xor<0>_30
+                                                       keyExp/a_tmp1<29>_rt
+    SLICE_X46Y71.A6      net (fanout=29)       0.580   keyExp/a_tmp1<29>
+    SLICE_X46Y71.COUT    Topcya                0.476   keyExp/Madd_ab_tmp_cy<3>
+                                                       keyExp/Madd_ab_tmp_lut<0>
+                                                       keyExp/Madd_ab_tmp_cy<3>
+    SLICE_X46Y72.CIN     net (fanout=1)        0.000   keyExp/Madd_ab_tmp_cy<3>
+    SLICE_X46Y72.CMUX    Tcinc                 0.300   keyExp/Madd_ab_tmp_cy<7>
+                                                       keyExp/Madd_ab_tmp_cy<7>
+    SLICE_X48Y74.C6      net (fanout=2)        0.606   keyExp/ab_tmp<6>
+    SLICE_X48Y74.COUT    Topcyc                0.398   keyExp/Madd_b_tmp1_cy<7>
+                                                       keyExp/Madd_b_tmp1_lut<6>
+                                                       keyExp/Madd_b_tmp1_cy<7>
+    SLICE_X48Y75.CIN     net (fanout=1)        0.007   keyExp/Madd_b_tmp1_cy<7>
+    SLICE_X48Y75.AMUX    Tcina                 0.286   keyExp/Madd_b_tmp1_cy<11>
+                                                       keyExp/Madd_b_tmp1_cy<11>
+    SLICE_X47Y75.B4      net (fanout=4)        0.911   keyExp/b_tmp1<8>
+    SLICE_X47Y75.B       Tilo                  0.097   N138
+                                                       keyExp/ab_tmp<1>51
+    SLICE_X51Y79.D3      net (fanout=6)        0.826   keyExp/ab_tmp<1>_mmx_out13
+    SLICE_X51Y79.D       Tilo                  0.097   keyExp/ab_tmp<3>_mmx_out11
+                                                       keyExp/ab_tmp<3>31
+    SLICE_X55Y80.A4      net (fanout=10)       0.712   keyExp/ab_tmp<3>_mmx_out11
+    SLICE_X55Y80.CLK     Tas                   0.067   keyExp/b_reg<7>
+                                                       keyExp/Mmux_b_tmp2301
+                                                       keyExp/b_reg_7
+    -------------------------------------------------  ---------------------------
+    Total                                     10.881ns (4.234ns logic, 6.647ns route)
+                                                       (38.9% logic, 61.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.081ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               keyExp/k_cnt_0 (FF)
+  Destination:          keyExp/b_reg_7 (FF)
+  Requirement:          11.111ns
+  Data Path Delay:      10.877ns (Levels of Logic = 14)
+  Clock Path Skew:      -0.118ns (1.019 - 1.137)
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 11.111ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: keyExp/k_cnt_0 to keyExp/b_reg_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X38Y54.AQ      Tcko                  0.393   keyExp/k_cnt<3>
+                                                       keyExp/k_cnt_0
+    SLICE_X12Y53.C6      net (fanout=279)      1.064   keyExp/k_cnt<0>
+    SLICE_X12Y53.C       Tilo                  0.097   keyExp/s_arr_tmp_7<19>
+                                                       keyExp/mux8_9
+    SLICE_X30Y54.D2      net (fanout=1)        1.134   keyExp/mux8_9
+    SLICE_X30Y54.CMUX    Topdc                 0.397   keyExp/mux8_8
+                                                       keyExp/mux8_4
+                                                       keyExp/mux8_2_f7
+    SLICE_X40Y63.B4      net (fanout=1)        0.906   keyExp/n0459<17>
+    SLICE_X40Y63.BMUX    Tilo                  0.263   keyExp/a_tmp1<19>
+                                                       keyExp/Madd_a_tmp117
+    SLICE_X40Y63.C5      net (fanout=2)        0.203   keyExp/Madd_a_tmp117
+    SLICE_X40Y63.COUT    Topcyc                0.398   keyExp/a_tmp1<19>
+                                                       keyExp/Madd_a_tmp1_lut<0>18
+                                                       keyExp/Madd_a_tmp1_cy<0>_18
+    SLICE_X40Y64.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>19
+    SLICE_X40Y64.COUT    Tbyp                  0.089   keyExp/a_tmp1<23>
+                                                       keyExp/Madd_a_tmp1_cy<0>_22
+    SLICE_X40Y65.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>23
+    SLICE_X40Y65.COUT    Tbyp                  0.089   keyExp/a_tmp1<27>
+                                                       keyExp/Madd_a_tmp1_cy<0>_26
+    SLICE_X40Y66.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>27
+    SLICE_X40Y66.BQ      Tito_logic            0.481   keyExp/a_tmp1<29>
+                                                       keyExp/Madd_a_tmp1_xor<0>_30
+                                                       keyExp/a_tmp1<29>_rt
+    SLICE_X46Y71.A6      net (fanout=29)       0.580   keyExp/a_tmp1<29>
+    SLICE_X46Y71.COUT    Topcya                0.476   keyExp/Madd_ab_tmp_cy<3>
+                                                       keyExp/Madd_ab_tmp_lut<0>
+                                                       keyExp/Madd_ab_tmp_cy<3>
+    SLICE_X46Y72.CIN     net (fanout=1)        0.000   keyExp/Madd_ab_tmp_cy<3>
+    SLICE_X46Y72.CMUX    Tcinc                 0.300   keyExp/Madd_ab_tmp_cy<7>
+                                                       keyExp/Madd_ab_tmp_cy<7>
+    SLICE_X48Y74.C6      net (fanout=2)        0.606   keyExp/ab_tmp<6>
+    SLICE_X48Y74.COUT    Topcyc                0.398   keyExp/Madd_b_tmp1_cy<7>
+                                                       keyExp/Madd_b_tmp1_lut<6>
+                                                       keyExp/Madd_b_tmp1_cy<7>
+    SLICE_X48Y75.CIN     net (fanout=1)        0.007   keyExp/Madd_b_tmp1_cy<7>
+    SLICE_X48Y75.AMUX    Tcina                 0.286   keyExp/Madd_b_tmp1_cy<11>
+                                                       keyExp/Madd_b_tmp1_cy<11>
+    SLICE_X47Y75.B4      net (fanout=4)        0.911   keyExp/b_tmp1<8>
+    SLICE_X47Y75.B       Tilo                  0.097   N138
+                                                       keyExp/ab_tmp<1>51
+    SLICE_X51Y79.D3      net (fanout=6)        0.826   keyExp/ab_tmp<1>_mmx_out13
+    SLICE_X51Y79.D       Tilo                  0.097   keyExp/ab_tmp<3>_mmx_out11
+                                                       keyExp/ab_tmp<3>31
+    SLICE_X55Y80.A4      net (fanout=10)       0.712   keyExp/ab_tmp<3>_mmx_out11
+    SLICE_X55Y80.CLK     Tas                   0.067   keyExp/b_reg<7>
+                                                       keyExp/Mmux_b_tmp2301
+                                                       keyExp/b_reg_7
+    -------------------------------------------------  ---------------------------
+    Total                                     10.877ns (3.928ns logic, 6.949ns route)
+                                                       (36.1% logic, 63.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point keyExp/b_reg_23 (SLICE_X54Y79.C4), 15718427 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.054ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               keyExp/k_cnt_0 (FF)
+  Destination:          keyExp/b_reg_23 (FF)
+  Requirement:          11.111ns
+  Data Path Delay:      10.903ns (Levels of Logic = 18)
+  Clock Path Skew:      -0.119ns (1.018 - 1.137)
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 11.111ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: keyExp/k_cnt_0 to keyExp/b_reg_23
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X38Y54.AQ      Tcko                  0.393   keyExp/k_cnt<3>
+                                                       keyExp/k_cnt_0
+    SLICE_X33Y49.A2      net (fanout=279)      1.206   keyExp/k_cnt<0>
+    SLICE_X33Y49.A       Tilo                  0.097   keyExp/mux22_8
+                                                       keyExp/mux22_81
+    SLICE_X33Y49.D1      net (fanout=1)        0.492   keyExp/mux22_81
+    SLICE_X33Y49.CMUX    Topdc                 0.408   keyExp/mux22_8
+                                                       keyExp/mux22_4
+                                                       keyExp/mux22_2_f7
+    SLICE_X40Y59.C3      net (fanout=1)        0.852   keyExp/n0459<2>
+    SLICE_X40Y59.CMUX    Tilo                  0.257   keyExp/a_tmp1<3>
+                                                       keyExp/Madd_a_tmp12
+    SLICE_X40Y59.D3      net (fanout=2)        0.454   keyExp/Madd_a_tmp12
+    SLICE_X40Y59.COUT    Topcyd                0.396   keyExp/a_tmp1<3>
+                                                       keyExp/Madd_a_tmp1_lut<0>3
+                                                       keyExp/Madd_a_tmp1_cy<0>_2
+    SLICE_X40Y60.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>3
+    SLICE_X40Y60.COUT    Tbyp                  0.089   keyExp/a_tmp1<7>
+                                                       keyExp/Madd_a_tmp1_cy<0>_6
+    SLICE_X40Y61.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>7
+    SLICE_X40Y61.COUT    Tbyp                  0.089   keyExp/a_tmp1<11>
+                                                       keyExp/Madd_a_tmp1_cy<0>_10
+    SLICE_X40Y62.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>11
+    SLICE_X40Y62.COUT    Tbyp                  0.089   keyExp/a_tmp1<15>
+                                                       keyExp/Madd_a_tmp1_cy<0>_14
+    SLICE_X40Y63.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>15
+    SLICE_X40Y63.COUT    Tbyp                  0.089   keyExp/a_tmp1<19>
+                                                       keyExp/Madd_a_tmp1_cy<0>_18
+    SLICE_X40Y64.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>19
+    SLICE_X40Y64.COUT    Tbyp                  0.089   keyExp/a_tmp1<23>
+                                                       keyExp/Madd_a_tmp1_cy<0>_22
+    SLICE_X40Y65.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>23
+    SLICE_X40Y65.COUT    Tbyp                  0.089   keyExp/a_tmp1<27>
+                                                       keyExp/Madd_a_tmp1_cy<0>_26
+    SLICE_X40Y66.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>27
+    SLICE_X40Y66.BQ      Tito_logic            0.481   keyExp/a_tmp1<29>
+                                                       keyExp/Madd_a_tmp1_xor<0>_30
+                                                       keyExp/a_tmp1<29>_rt
+    SLICE_X46Y71.A6      net (fanout=29)       0.580   keyExp/a_tmp1<29>
+    SLICE_X46Y71.COUT    Topcya                0.476   keyExp/Madd_ab_tmp_cy<3>
+                                                       keyExp/Madd_ab_tmp_lut<0>
+                                                       keyExp/Madd_ab_tmp_cy<3>
+    SLICE_X46Y72.CIN     net (fanout=1)        0.000   keyExp/Madd_ab_tmp_cy<3>
+    SLICE_X46Y72.CMUX    Tcinc                 0.300   keyExp/Madd_ab_tmp_cy<7>
+                                                       keyExp/Madd_ab_tmp_cy<7>
+    SLICE_X48Y74.C6      net (fanout=2)        0.606   keyExp/ab_tmp<6>
+    SLICE_X48Y74.COUT    Topcyc                0.398   keyExp/Madd_b_tmp1_cy<7>
+                                                       keyExp/Madd_b_tmp1_lut<6>
+                                                       keyExp/Madd_b_tmp1_cy<7>
+    SLICE_X48Y75.CIN     net (fanout=1)        0.007   keyExp/Madd_b_tmp1_cy<7>
+    SLICE_X48Y75.AMUX    Tcina                 0.286   keyExp/Madd_b_tmp1_cy<11>
+                                                       keyExp/Madd_b_tmp1_cy<11>
+    SLICE_X47Y75.B4      net (fanout=4)        0.911   keyExp/b_tmp1<8>
+    SLICE_X47Y75.B       Tilo                  0.097   N138
+                                                       keyExp/ab_tmp<1>51
+    SLICE_X51Y79.D3      net (fanout=6)        0.826   keyExp/ab_tmp<1>_mmx_out13
+    SLICE_X51Y79.D       Tilo                  0.097   keyExp/ab_tmp<3>_mmx_out11
+                                                       keyExp/ab_tmp<3>31
+    SLICE_X54Y79.C4      net (fanout=10)       0.722   keyExp/ab_tmp<3>_mmx_out11
+    SLICE_X54Y79.CLK     Tas                   0.027   keyExp/b_reg<23>
+                                                       keyExp/Mmux_b_tmp2161
+                                                       keyExp/b_reg_23
+    -------------------------------------------------  ---------------------------
+    Total                                     10.903ns (4.247ns logic, 6.656ns route)
+                                                       (39.0% logic, 61.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.105ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               keyExp/i_cnt_2 (FF)
+  Destination:          keyExp/b_reg_23 (FF)
+  Requirement:          11.111ns
+  Data Path Delay:      10.851ns (Levels of Logic = 16)
+  Clock Path Skew:      -0.120ns (1.018 - 1.138)
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 11.111ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: keyExp/i_cnt_2 to keyExp/b_reg_23
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X35Y54.CMUX    Tshcko                0.428   keyExp/i_cnt<4>
+                                                       keyExp/i_cnt_2
+    SLICE_X37Y48.D2      net (fanout=92)       1.620   keyExp/i_cnt<2>
+    SLICE_X37Y48.CMUX    Topdc                 0.408   keyExp/s_arr_tmp_15<4>
+                                                       keyExp/mux25_4
+                                                       keyExp/mux25_2_f7
+    SLICE_X40Y59.D4      net (fanout=1)        0.800   keyExp/n0459<3>
+    SLICE_X40Y59.DMUX    Tilo                  0.259   keyExp/a_tmp1<3>
+                                                       keyExp/Madd_a_tmp13
+    SLICE_X40Y60.A3      net (fanout=2)        0.585   keyExp/Madd_a_tmp13
+    SLICE_X40Y60.COUT    Topcya                0.492   keyExp/a_tmp1<7>
+                                                       keyExp/Madd_a_tmp1_lut<0>4
+                                                       keyExp/Madd_a_tmp1_cy<0>_6
+    SLICE_X40Y61.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>7
+    SLICE_X40Y61.COUT    Tbyp                  0.089   keyExp/a_tmp1<11>
+                                                       keyExp/Madd_a_tmp1_cy<0>_10
+    SLICE_X40Y62.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>11
+    SLICE_X40Y62.COUT    Tbyp                  0.089   keyExp/a_tmp1<15>
+                                                       keyExp/Madd_a_tmp1_cy<0>_14
+    SLICE_X40Y63.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>15
+    SLICE_X40Y63.COUT    Tbyp                  0.089   keyExp/a_tmp1<19>
+                                                       keyExp/Madd_a_tmp1_cy<0>_18
+    SLICE_X40Y64.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>19
+    SLICE_X40Y64.COUT    Tbyp                  0.089   keyExp/a_tmp1<23>
+                                                       keyExp/Madd_a_tmp1_cy<0>_22
+    SLICE_X40Y65.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>23
+    SLICE_X40Y65.COUT    Tbyp                  0.089   keyExp/a_tmp1<27>
+                                                       keyExp/Madd_a_tmp1_cy<0>_26
+    SLICE_X40Y66.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>27
+    SLICE_X40Y66.BQ      Tito_logic            0.481   keyExp/a_tmp1<29>
+                                                       keyExp/Madd_a_tmp1_xor<0>_30
+                                                       keyExp/a_tmp1<29>_rt
+    SLICE_X46Y71.A6      net (fanout=29)       0.580   keyExp/a_tmp1<29>
+    SLICE_X46Y71.COUT    Topcya                0.476   keyExp/Madd_ab_tmp_cy<3>
+                                                       keyExp/Madd_ab_tmp_lut<0>
+                                                       keyExp/Madd_ab_tmp_cy<3>
+    SLICE_X46Y72.CIN     net (fanout=1)        0.000   keyExp/Madd_ab_tmp_cy<3>
+    SLICE_X46Y72.CMUX    Tcinc                 0.300   keyExp/Madd_ab_tmp_cy<7>
+                                                       keyExp/Madd_ab_tmp_cy<7>
+    SLICE_X48Y74.C6      net (fanout=2)        0.606   keyExp/ab_tmp<6>
+    SLICE_X48Y74.COUT    Topcyc                0.398   keyExp/Madd_b_tmp1_cy<7>
+                                                       keyExp/Madd_b_tmp1_lut<6>
+                                                       keyExp/Madd_b_tmp1_cy<7>
+    SLICE_X48Y75.CIN     net (fanout=1)        0.007   keyExp/Madd_b_tmp1_cy<7>
+    SLICE_X48Y75.AMUX    Tcina                 0.286   keyExp/Madd_b_tmp1_cy<11>
+                                                       keyExp/Madd_b_tmp1_cy<11>
+    SLICE_X47Y75.B4      net (fanout=4)        0.911   keyExp/b_tmp1<8>
+    SLICE_X47Y75.B       Tilo                  0.097   N138
+                                                       keyExp/ab_tmp<1>51
+    SLICE_X51Y79.D3      net (fanout=6)        0.826   keyExp/ab_tmp<1>_mmx_out13
+    SLICE_X51Y79.D       Tilo                  0.097   keyExp/ab_tmp<3>_mmx_out11
+                                                       keyExp/ab_tmp<3>31
+    SLICE_X54Y79.C4      net (fanout=10)       0.722   keyExp/ab_tmp<3>_mmx_out11
+    SLICE_X54Y79.CLK     Tas                   0.027   keyExp/b_reg<23>
+                                                       keyExp/Mmux_b_tmp2161
+                                                       keyExp/b_reg_23
+    -------------------------------------------------  ---------------------------
+    Total                                     10.851ns (4.194ns logic, 6.657ns route)
+                                                       (38.7% logic, 61.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.110ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               keyExp/k_cnt_0 (FF)
+  Destination:          keyExp/b_reg_23 (FF)
+  Requirement:          11.111ns
+  Data Path Delay:      10.847ns (Levels of Logic = 14)
+  Clock Path Skew:      -0.119ns (1.018 - 1.137)
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 11.111ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: keyExp/k_cnt_0 to keyExp/b_reg_23
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X38Y54.AQ      Tcko                  0.393   keyExp/k_cnt<3>
+                                                       keyExp/k_cnt_0
+    SLICE_X12Y53.C6      net (fanout=279)      1.064   keyExp/k_cnt<0>
+    SLICE_X12Y53.C       Tilo                  0.097   keyExp/s_arr_tmp_7<19>
+                                                       keyExp/mux8_9
+    SLICE_X30Y54.D2      net (fanout=1)        1.134   keyExp/mux8_9
+    SLICE_X30Y54.CMUX    Topdc                 0.397   keyExp/mux8_8
+                                                       keyExp/mux8_4
+                                                       keyExp/mux8_2_f7
+    SLICE_X40Y63.B4      net (fanout=1)        0.906   keyExp/n0459<17>
+    SLICE_X40Y63.BMUX    Tilo                  0.263   keyExp/a_tmp1<19>
+                                                       keyExp/Madd_a_tmp117
+    SLICE_X40Y63.C5      net (fanout=2)        0.203   keyExp/Madd_a_tmp117
+    SLICE_X40Y63.COUT    Topcyc                0.398   keyExp/a_tmp1<19>
+                                                       keyExp/Madd_a_tmp1_lut<0>18
+                                                       keyExp/Madd_a_tmp1_cy<0>_18
+    SLICE_X40Y64.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>19
+    SLICE_X40Y64.COUT    Tbyp                  0.089   keyExp/a_tmp1<23>
+                                                       keyExp/Madd_a_tmp1_cy<0>_22
+    SLICE_X40Y65.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>23
+    SLICE_X40Y65.COUT    Tbyp                  0.089   keyExp/a_tmp1<27>
+                                                       keyExp/Madd_a_tmp1_cy<0>_26
+    SLICE_X40Y66.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>27
+    SLICE_X40Y66.BQ      Tito_logic            0.481   keyExp/a_tmp1<29>
+                                                       keyExp/Madd_a_tmp1_xor<0>_30
+                                                       keyExp/a_tmp1<29>_rt
+    SLICE_X46Y71.A6      net (fanout=29)       0.580   keyExp/a_tmp1<29>
+    SLICE_X46Y71.COUT    Topcya                0.476   keyExp/Madd_ab_tmp_cy<3>
+                                                       keyExp/Madd_ab_tmp_lut<0>
+                                                       keyExp/Madd_ab_tmp_cy<3>
+    SLICE_X46Y72.CIN     net (fanout=1)        0.000   keyExp/Madd_ab_tmp_cy<3>
+    SLICE_X46Y72.CMUX    Tcinc                 0.300   keyExp/Madd_ab_tmp_cy<7>
+                                                       keyExp/Madd_ab_tmp_cy<7>
+    SLICE_X48Y74.C6      net (fanout=2)        0.606   keyExp/ab_tmp<6>
+    SLICE_X48Y74.COUT    Topcyc                0.398   keyExp/Madd_b_tmp1_cy<7>
+                                                       keyExp/Madd_b_tmp1_lut<6>
+                                                       keyExp/Madd_b_tmp1_cy<7>
+    SLICE_X48Y75.CIN     net (fanout=1)        0.007   keyExp/Madd_b_tmp1_cy<7>
+    SLICE_X48Y75.AMUX    Tcina                 0.286   keyExp/Madd_b_tmp1_cy<11>
+                                                       keyExp/Madd_b_tmp1_cy<11>
+    SLICE_X47Y75.B4      net (fanout=4)        0.911   keyExp/b_tmp1<8>
+    SLICE_X47Y75.B       Tilo                  0.097   N138
+                                                       keyExp/ab_tmp<1>51
+    SLICE_X51Y79.D3      net (fanout=6)        0.826   keyExp/ab_tmp<1>_mmx_out13
+    SLICE_X51Y79.D       Tilo                  0.097   keyExp/ab_tmp<3>_mmx_out11
+                                                       keyExp/ab_tmp<3>31
+    SLICE_X54Y79.C4      net (fanout=10)       0.722   keyExp/ab_tmp<3>_mmx_out11
+    SLICE_X54Y79.CLK     Tas                   0.027   keyExp/b_reg<23>
+                                                       keyExp/Mmux_b_tmp2161
+                                                       keyExp/b_reg_23
+    -------------------------------------------------  ---------------------------
+    Total                                     10.847ns (3.888ns logic, 6.959ns route)
+                                                       (35.8% logic, 64.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point keyExp/l_arr_1_23 (SLICE_X46Y81.D1), 15718427 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.078ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               keyExp/k_cnt_0 (FF)
+  Destination:          keyExp/l_arr_1_23 (FF)
+  Requirement:          11.111ns
+  Data Path Delay:      10.943ns (Levels of Logic = 18)
+  Clock Path Skew:      -0.055ns (0.561 - 0.616)
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 11.111ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: keyExp/k_cnt_0 to keyExp/l_arr_1_23
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X38Y54.AQ      Tcko                  0.393   keyExp/k_cnt<3>
+                                                       keyExp/k_cnt_0
+    SLICE_X33Y49.A2      net (fanout=279)      1.206   keyExp/k_cnt<0>
+    SLICE_X33Y49.A       Tilo                  0.097   keyExp/mux22_8
+                                                       keyExp/mux22_81
+    SLICE_X33Y49.D1      net (fanout=1)        0.492   keyExp/mux22_81
+    SLICE_X33Y49.CMUX    Topdc                 0.408   keyExp/mux22_8
+                                                       keyExp/mux22_4
+                                                       keyExp/mux22_2_f7
+    SLICE_X40Y59.C3      net (fanout=1)        0.852   keyExp/n0459<2>
+    SLICE_X40Y59.CMUX    Tilo                  0.257   keyExp/a_tmp1<3>
+                                                       keyExp/Madd_a_tmp12
+    SLICE_X40Y59.D3      net (fanout=2)        0.454   keyExp/Madd_a_tmp12
+    SLICE_X40Y59.COUT    Topcyd                0.396   keyExp/a_tmp1<3>
+                                                       keyExp/Madd_a_tmp1_lut<0>3
+                                                       keyExp/Madd_a_tmp1_cy<0>_2
+    SLICE_X40Y60.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>3
+    SLICE_X40Y60.COUT    Tbyp                  0.089   keyExp/a_tmp1<7>
+                                                       keyExp/Madd_a_tmp1_cy<0>_6
+    SLICE_X40Y61.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>7
+    SLICE_X40Y61.COUT    Tbyp                  0.089   keyExp/a_tmp1<11>
+                                                       keyExp/Madd_a_tmp1_cy<0>_10
+    SLICE_X40Y62.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>11
+    SLICE_X40Y62.COUT    Tbyp                  0.089   keyExp/a_tmp1<15>
+                                                       keyExp/Madd_a_tmp1_cy<0>_14
+    SLICE_X40Y63.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>15
+    SLICE_X40Y63.COUT    Tbyp                  0.089   keyExp/a_tmp1<19>
+                                                       keyExp/Madd_a_tmp1_cy<0>_18
+    SLICE_X40Y64.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>19
+    SLICE_X40Y64.COUT    Tbyp                  0.089   keyExp/a_tmp1<23>
+                                                       keyExp/Madd_a_tmp1_cy<0>_22
+    SLICE_X40Y65.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>23
+    SLICE_X40Y65.COUT    Tbyp                  0.089   keyExp/a_tmp1<27>
+                                                       keyExp/Madd_a_tmp1_cy<0>_26
+    SLICE_X40Y66.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>27
+    SLICE_X40Y66.BQ      Tito_logic            0.481   keyExp/a_tmp1<29>
+                                                       keyExp/Madd_a_tmp1_xor<0>_30
+                                                       keyExp/a_tmp1<29>_rt
+    SLICE_X46Y71.A6      net (fanout=29)       0.580   keyExp/a_tmp1<29>
+    SLICE_X46Y71.COUT    Topcya                0.476   keyExp/Madd_ab_tmp_cy<3>
+                                                       keyExp/Madd_ab_tmp_lut<0>
+                                                       keyExp/Madd_ab_tmp_cy<3>
+    SLICE_X46Y72.CIN     net (fanout=1)        0.000   keyExp/Madd_ab_tmp_cy<3>
+    SLICE_X46Y72.CMUX    Tcinc                 0.300   keyExp/Madd_ab_tmp_cy<7>
+                                                       keyExp/Madd_ab_tmp_cy<7>
+    SLICE_X48Y74.C6      net (fanout=2)        0.606   keyExp/ab_tmp<6>
+    SLICE_X48Y74.COUT    Topcyc                0.398   keyExp/Madd_b_tmp1_cy<7>
+                                                       keyExp/Madd_b_tmp1_lut<6>
+                                                       keyExp/Madd_b_tmp1_cy<7>
+    SLICE_X48Y75.CIN     net (fanout=1)        0.007   keyExp/Madd_b_tmp1_cy<7>
+    SLICE_X48Y75.AMUX    Tcina                 0.286   keyExp/Madd_b_tmp1_cy<11>
+                                                       keyExp/Madd_b_tmp1_cy<11>
+    SLICE_X47Y75.B4      net (fanout=4)        0.911   keyExp/b_tmp1<8>
+    SLICE_X47Y75.B       Tilo                  0.097   N138
+                                                       keyExp/ab_tmp<1>51
+    SLICE_X51Y79.D3      net (fanout=6)        0.826   keyExp/ab_tmp<1>_mmx_out13
+    SLICE_X51Y79.D       Tilo                  0.097   keyExp/ab_tmp<3>_mmx_out11
+                                                       keyExp/ab_tmp<3>31
+    SLICE_X46Y81.D1      net (fanout=10)       0.762   keyExp/ab_tmp<3>_mmx_out11
+    SLICE_X46Y81.CLK     Tas                   0.027   keyExp/l_arr_1<23>
+                                                       keyExp/Mmux_l_arr[1][31]_ukey[63]_mux_130_OUT161
+                                                       keyExp/l_arr_1_23
+    -------------------------------------------------  ---------------------------
+    Total                                     10.943ns (4.247ns logic, 6.696ns route)
+                                                       (38.8% logic, 61.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.125ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               keyExp/s_arr_tmp_25_2 (FF)
+  Destination:          keyExp/l_arr_1_23 (FF)
+  Requirement:          11.111ns
+  Data Path Delay:      10.721ns (Levels of Logic = 18)
+  Clock Path Skew:      -0.230ns (1.027 - 1.257)
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 11.111ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: keyExp/s_arr_tmp_25_2 to keyExp/l_arr_1_23
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X36Y43.CQ      Tcko                  0.341   keyExp/s_arr_tmp_25<3>
+                                                       keyExp/s_arr_tmp_25_2
+    SLICE_X35Y44.A4      net (fanout=2)        0.760   keyExp/s_arr_tmp_25<2>
+    SLICE_X35Y44.A       Tilo                  0.097   keyExp/s_arr_tmp_15<6>
+                                                       keyExp/i_cnt<0>231
+    SLICE_X33Y49.C4      net (fanout=1)        0.761   keyExp/i_cnt<0>123
+    SLICE_X33Y49.CMUX    Tilo                  0.415   keyExp/mux22_8
+                                                       keyExp/mux22_3
+                                                       keyExp/mux22_2_f7
+    SLICE_X40Y59.C3      net (fanout=1)        0.852   keyExp/n0459<2>
+    SLICE_X40Y59.CMUX    Tilo                  0.257   keyExp/a_tmp1<3>
+                                                       keyExp/Madd_a_tmp12
+    SLICE_X40Y59.D3      net (fanout=2)        0.454   keyExp/Madd_a_tmp12
+    SLICE_X40Y59.COUT    Topcyd                0.396   keyExp/a_tmp1<3>
+                                                       keyExp/Madd_a_tmp1_lut<0>3
+                                                       keyExp/Madd_a_tmp1_cy<0>_2
+    SLICE_X40Y60.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>3
+    SLICE_X40Y60.COUT    Tbyp                  0.089   keyExp/a_tmp1<7>
+                                                       keyExp/Madd_a_tmp1_cy<0>_6
+    SLICE_X40Y61.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>7
+    SLICE_X40Y61.COUT    Tbyp                  0.089   keyExp/a_tmp1<11>
+                                                       keyExp/Madd_a_tmp1_cy<0>_10
+    SLICE_X40Y62.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>11
+    SLICE_X40Y62.COUT    Tbyp                  0.089   keyExp/a_tmp1<15>
+                                                       keyExp/Madd_a_tmp1_cy<0>_14
+    SLICE_X40Y63.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>15
+    SLICE_X40Y63.COUT    Tbyp                  0.089   keyExp/a_tmp1<19>
+                                                       keyExp/Madd_a_tmp1_cy<0>_18
+    SLICE_X40Y64.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>19
+    SLICE_X40Y64.COUT    Tbyp                  0.089   keyExp/a_tmp1<23>
+                                                       keyExp/Madd_a_tmp1_cy<0>_22
+    SLICE_X40Y65.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>23
+    SLICE_X40Y65.COUT    Tbyp                  0.089   keyExp/a_tmp1<27>
+                                                       keyExp/Madd_a_tmp1_cy<0>_26
+    SLICE_X40Y66.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>27
+    SLICE_X40Y66.BQ      Tito_logic            0.481   keyExp/a_tmp1<29>
+                                                       keyExp/Madd_a_tmp1_xor<0>_30
+                                                       keyExp/a_tmp1<29>_rt
+    SLICE_X46Y71.A6      net (fanout=29)       0.580   keyExp/a_tmp1<29>
+    SLICE_X46Y71.COUT    Topcya                0.476   keyExp/Madd_ab_tmp_cy<3>
+                                                       keyExp/Madd_ab_tmp_lut<0>
+                                                       keyExp/Madd_ab_tmp_cy<3>
+    SLICE_X46Y72.CIN     net (fanout=1)        0.000   keyExp/Madd_ab_tmp_cy<3>
+    SLICE_X46Y72.CMUX    Tcinc                 0.300   keyExp/Madd_ab_tmp_cy<7>
+                                                       keyExp/Madd_ab_tmp_cy<7>
+    SLICE_X48Y74.C6      net (fanout=2)        0.606   keyExp/ab_tmp<6>
+    SLICE_X48Y74.COUT    Topcyc                0.398   keyExp/Madd_b_tmp1_cy<7>
+                                                       keyExp/Madd_b_tmp1_lut<6>
+                                                       keyExp/Madd_b_tmp1_cy<7>
+    SLICE_X48Y75.CIN     net (fanout=1)        0.007   keyExp/Madd_b_tmp1_cy<7>
+    SLICE_X48Y75.AMUX    Tcina                 0.286   keyExp/Madd_b_tmp1_cy<11>
+                                                       keyExp/Madd_b_tmp1_cy<11>
+    SLICE_X47Y75.B4      net (fanout=4)        0.911   keyExp/b_tmp1<8>
+    SLICE_X47Y75.B       Tilo                  0.097   N138
+                                                       keyExp/ab_tmp<1>51
+    SLICE_X51Y79.D3      net (fanout=6)        0.826   keyExp/ab_tmp<1>_mmx_out13
+    SLICE_X51Y79.D       Tilo                  0.097   keyExp/ab_tmp<3>_mmx_out11
+                                                       keyExp/ab_tmp<3>31
+    SLICE_X46Y81.D1      net (fanout=10)       0.762   keyExp/ab_tmp<3>_mmx_out11
+    SLICE_X46Y81.CLK     Tas                   0.027   keyExp/l_arr_1<23>
+                                                       keyExp/Mmux_l_arr[1][31]_ukey[63]_mux_130_OUT161
+                                                       keyExp/l_arr_1_23
+    -------------------------------------------------  ---------------------------
+    Total                                     10.721ns (4.202ns logic, 6.519ns route)
+                                                       (39.2% logic, 60.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.129ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               keyExp/i_cnt_2 (FF)
+  Destination:          keyExp/l_arr_1_23 (FF)
+  Requirement:          11.111ns
+  Data Path Delay:      10.891ns (Levels of Logic = 16)
+  Clock Path Skew:      -0.056ns (0.561 - 0.617)
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 11.111ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: keyExp/i_cnt_2 to keyExp/l_arr_1_23
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X35Y54.CMUX    Tshcko                0.428   keyExp/i_cnt<4>
+                                                       keyExp/i_cnt_2
+    SLICE_X37Y48.D2      net (fanout=92)       1.620   keyExp/i_cnt<2>
+    SLICE_X37Y48.CMUX    Topdc                 0.408   keyExp/s_arr_tmp_15<4>
+                                                       keyExp/mux25_4
+                                                       keyExp/mux25_2_f7
+    SLICE_X40Y59.D4      net (fanout=1)        0.800   keyExp/n0459<3>
+    SLICE_X40Y59.DMUX    Tilo                  0.259   keyExp/a_tmp1<3>
+                                                       keyExp/Madd_a_tmp13
+    SLICE_X40Y60.A3      net (fanout=2)        0.585   keyExp/Madd_a_tmp13
+    SLICE_X40Y60.COUT    Topcya                0.492   keyExp/a_tmp1<7>
+                                                       keyExp/Madd_a_tmp1_lut<0>4
+                                                       keyExp/Madd_a_tmp1_cy<0>_6
+    SLICE_X40Y61.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>7
+    SLICE_X40Y61.COUT    Tbyp                  0.089   keyExp/a_tmp1<11>
+                                                       keyExp/Madd_a_tmp1_cy<0>_10
+    SLICE_X40Y62.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>11
+    SLICE_X40Y62.COUT    Tbyp                  0.089   keyExp/a_tmp1<15>
+                                                       keyExp/Madd_a_tmp1_cy<0>_14
+    SLICE_X40Y63.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>15
+    SLICE_X40Y63.COUT    Tbyp                  0.089   keyExp/a_tmp1<19>
+                                                       keyExp/Madd_a_tmp1_cy<0>_18
+    SLICE_X40Y64.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>19
+    SLICE_X40Y64.COUT    Tbyp                  0.089   keyExp/a_tmp1<23>
+                                                       keyExp/Madd_a_tmp1_cy<0>_22
+    SLICE_X40Y65.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>23
+    SLICE_X40Y65.COUT    Tbyp                  0.089   keyExp/a_tmp1<27>
+                                                       keyExp/Madd_a_tmp1_cy<0>_26
+    SLICE_X40Y66.CIN     net (fanout=1)        0.000   keyExp/Madd_a_tmp1_cy<0>27
+    SLICE_X40Y66.BQ      Tito_logic            0.481   keyExp/a_tmp1<29>
+                                                       keyExp/Madd_a_tmp1_xor<0>_30
+                                                       keyExp/a_tmp1<29>_rt
+    SLICE_X46Y71.A6      net (fanout=29)       0.580   keyExp/a_tmp1<29>
+    SLICE_X46Y71.COUT    Topcya                0.476   keyExp/Madd_ab_tmp_cy<3>
+                                                       keyExp/Madd_ab_tmp_lut<0>
+                                                       keyExp/Madd_ab_tmp_cy<3>
+    SLICE_X46Y72.CIN     net (fanout=1)        0.000   keyExp/Madd_ab_tmp_cy<3>
+    SLICE_X46Y72.CMUX    Tcinc                 0.300   keyExp/Madd_ab_tmp_cy<7>
+                                                       keyExp/Madd_ab_tmp_cy<7>
+    SLICE_X48Y74.C6      net (fanout=2)        0.606   keyExp/ab_tmp<6>
+    SLICE_X48Y74.COUT    Topcyc                0.398   keyExp/Madd_b_tmp1_cy<7>
+                                                       keyExp/Madd_b_tmp1_lut<6>
+                                                       keyExp/Madd_b_tmp1_cy<7>
+    SLICE_X48Y75.CIN     net (fanout=1)        0.007   keyExp/Madd_b_tmp1_cy<7>
+    SLICE_X48Y75.AMUX    Tcina                 0.286   keyExp/Madd_b_tmp1_cy<11>
+                                                       keyExp/Madd_b_tmp1_cy<11>
+    SLICE_X47Y75.B4      net (fanout=4)        0.911   keyExp/b_tmp1<8>
+    SLICE_X47Y75.B       Tilo                  0.097   N138
+                                                       keyExp/ab_tmp<1>51
+    SLICE_X51Y79.D3      net (fanout=6)        0.826   keyExp/ab_tmp<1>_mmx_out13
+    SLICE_X51Y79.D       Tilo                  0.097   keyExp/ab_tmp<3>_mmx_out11
+                                                       keyExp/ab_tmp<3>31
+    SLICE_X46Y81.D1      net (fanout=10)       0.762   keyExp/ab_tmp<3>_mmx_out11
+    SLICE_X46Y81.CLK     Tas                   0.027   keyExp/l_arr_1<23>
+                                                       keyExp/Mmux_l_arr[1][31]_ukey[63]_mux_130_OUT161
+                                                       keyExp/l_arr_1_23
+    -------------------------------------------------  ---------------------------
+    Total                                     10.891ns (4.194ns logic, 6.697ns route)
+                                                       (38.5% logic, 61.5% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 90 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point exp_in_77 (SLICE_X47Y85.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.000ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               in9_5 (FF)
+  Destination:          exp_in_77 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.267ns (Levels of Logic = 0)
+  Clock Path Skew:      0.267ns (0.775 - 0.508)
+  Source Clock:         CLK_BUFGP rising at 11.111ns
+  Destination Clock:    CLK_BUFGP rising at 11.111ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: in9_5 to exp_in_77
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X53Y85.BQ      Tcko                  0.141   in9<7>
+                                                       in9_5
+    SLICE_X47Y85.BX      net (fanout=1)        0.197   in9<5>
+    SLICE_X47Y85.CLK     Tckdi       (-Th)     0.071   exp_in<79>
+                                                       exp_in_77
+    -------------------------------------------------  ---------------------------
+    Total                                      0.267ns (0.070ns logic, 0.197ns route)
+                                                       (26.2% logic, 73.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point keyExp/skey_13_19 (SLICE_X28Y46.DX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.001ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               keyExp/s_arr_tmp_13_19 (FF)
+  Destination:          keyExp/skey_13_19 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.337ns (Levels of Logic = 0)
+  Clock Path Skew:      0.336ns (0.856 - 0.520)
+  Source Clock:         CLK_BUFGP rising at 11.111ns
+  Destination Clock:    CLK_BUFGP rising at 11.111ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: keyExp/s_arr_tmp_13_19 to keyExp/skey_13_19
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X30Y51.DQ      Tcko                  0.164   keyExp/s_arr_tmp_13<19>
+                                                       keyExp/s_arr_tmp_13_19
+    SLICE_X28Y46.DX      net (fanout=2)        0.245   keyExp/s_arr_tmp_13<19>
+    SLICE_X28Y46.CLK     Tckdi       (-Th)     0.072   keyExp/skey_13<19>
+                                                       keyExp/skey_13_19
+    -------------------------------------------------  ---------------------------
+    Total                                      0.337ns (0.092ns logic, 0.245ns route)
+                                                       (27.3% logic, 72.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point exp_in_79 (SLICE_X47Y85.DX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.009ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               in9_7 (FF)
+  Destination:          exp_in_79 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.276ns (Levels of Logic = 0)
+  Clock Path Skew:      0.267ns (0.775 - 0.508)
+  Source Clock:         CLK_BUFGP rising at 11.111ns
+  Destination Clock:    CLK_BUFGP rising at 11.111ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: in9_7 to exp_in_79
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X53Y85.DQ      Tcko                  0.141   in9<7>
+                                                       in9_7
+    SLICE_X47Y85.DX      net (fanout=1)        0.213   in9<7>
+    SLICE_X47Y85.CLK     Tckdi       (-Th)     0.078   exp_in<79>
+                                                       exp_in_79
+    -------------------------------------------------  ---------------------------
+    Total                                      0.276ns (0.063ns logic, 0.213ns route)
+                                                       (22.8% logic, 77.2% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 90 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 9.519ns (period - min period limit)
+  Period: 11.111ns
+  Min period limit: 1.592ns (628.141MHz) (Tbcper_I(Fmax))
+  Physical resource: CLK_BUFGP/BUFG/I0
+  Logical resource: CLK_BUFGP/BUFG/I0
+  Location pin: BUFGCTRL_X0Y31.I0
+  Clock network: CLK_BUFGP/IBUFG
+--------------------------------------------------------------------------------
+Slack: 10.111ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 11.111ns
+  Low pulse: 5.555ns
+  Low pulse limit: 0.500ns (Tcl)
+  Physical resource: encrypt/a_reg<3>/CLK
+  Logical resource: encrypt/a_reg_0/CK
+  Location pin: SLICE_X14Y65.CLK
+  Clock network: CLK_BUFGP
+--------------------------------------------------------------------------------
+Slack: 10.111ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 11.111ns
+  High pulse: 5.555ns
+  High pulse limit: 0.500ns (Tch)
+  Physical resource: encrypt/a_reg<3>/CLK
+  Logical resource: encrypt/a_reg_0/CK
+  Location pin: SLICE_X14Y65.CLK
+  Clock network: CLK_BUFGP
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |   11.086|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 6721058550 paths, 0 nets, and 15223 connections
+
+Design statistics:
+   Minimum period:  11.086ns{1}   (Maximum frequency:  90.204MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Sun Dec 11 15:01:34 2016 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 696 MB
+
+
+

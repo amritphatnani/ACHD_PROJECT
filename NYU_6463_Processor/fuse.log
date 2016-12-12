@@ -1,0 +1,54 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/amrit/Documents/GitHub/ACHD_PROJECT/NYU_6463_Processor/MIPS_isim_beh.exe -prj C:/Users/amrit/Documents/GitHub/ACHD_PROJECT/NYU_6463_Processor/MIPS_beh.prj work.MIPS 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/amrit/Documents/GitHub/ACHD_PROJECT/NYU_6463_Processor/ShiftLeft2.vhd" into library work
+Parsing VHDL file "C:/Users/amrit/Documents/GitHub/ACHD_PROJECT/NYU_6463_Processor/program_counter.vhd" into library work
+Parsing VHDL file "C:/Users/amrit/Documents/GitHub/ACHD_PROJECT/NYU_6463_Processor/mux_2_1.vhd" into library work
+Parsing VHDL file "C:/Users/amrit/Documents/GitHub/ACHD_PROJECT/NYU_6463_Processor/memInstruction.vhd" into library work
+Parsing VHDL file "C:/Users/amrit/Documents/GitHub/ACHD_PROJECT/NYU_6463_Processor/Adder.vhd" into library work
+Parsing VHDL file "C:/Users/amrit/Documents/GitHub/ACHD_PROJECT/NYU_6463_Processor/signExt.vhd" into library work
+Parsing VHDL file "C:/Users/amrit/Documents/GitHub/ACHD_PROJECT/NYU_6463_Processor/register_file.vhd" into library work
+Parsing VHDL file "C:/Users/amrit/Documents/GitHub/ACHD_PROJECT/NYU_6463_Processor/mux_5bits.vhd" into library work
+Parsing VHDL file "C:/Users/amrit/Documents/GitHub/ACHD_PROJECT/NYU_6463_Processor/InstructionFetch.vhd" into library work
+WARNING:HDLCompiler:946 - "C:/Users/amrit/Documents/GitHub/ACHD_PROJECT/NYU_6463_Processor/InstructionFetch.vhd" Line 92: Actual for formal port input is neither a static name nor a globally static expression
+Parsing VHDL file "C:/Users/amrit/Documents/GitHub/ACHD_PROJECT/NYU_6463_Processor/ff_5bit.vhd" into library work
+Parsing VHDL file "C:/Users/amrit/Documents/GitHub/ACHD_PROJECT/NYU_6463_Processor/ff_32bit.vhd" into library work
+Parsing VHDL file "C:/Users/amrit/Documents/GitHub/ACHD_PROJECT/NYU_6463_Processor/ff_1bit.vhd" into library work
+Parsing VHDL file "C:/Users/amrit/Documents/GitHub/ACHD_PROJECT/NYU_6463_Processor/dataMem.vhd" into library work
+Parsing VHDL file "C:/Users/amrit/Documents/GitHub/ACHD_PROJECT/NYU_6463_Processor/ControlUnit.vhd" into library work
+Parsing VHDL file "C:/Users/amrit/Documents/GitHub/ACHD_PROJECT/NYU_6463_Processor/ALUCtrl.vhd" into library work
+Parsing VHDL file "C:/Users/amrit/Documents/GitHub/ACHD_PROJECT/NYU_6463_Processor/ALU.vhd" into library work
+Parsing VHDL file "C:/Users/amrit/Documents/GitHub/ACHD_PROJECT/NYU_6463_Processor/MIPS.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package numeric_std
+Compiling architecture behavioral of entity signExt [signext_default]
+Compiling architecture behavioral of entity mux_2_1 [mux_2_1_default]
+Compiling architecture behavioral of entity program_counter [program_counter_default]
+Compiling architecture behavioral of entity memInstruction [meminstruction_default]
+Compiling architecture behavioral of entity Adder [adder_default]
+Compiling architecture behavioral of entity ShiftLeft2 [shiftleft2_default]
+Compiling architecture behavioral of entity InstructionFetch [instructionfetch_default]
+Compiling architecture behavioral of entity ControlUnit [controlunit_default]
+Compiling architecture rtl of entity register_file [\register_file(32)\]
+Compiling architecture behavioral of entity ALUCtrl [aluctrl_default]
+Compiling architecture behavioral of entity ALU [alu_default]
+Compiling architecture behavioral of entity dataMem [datamem_default]
+Compiling architecture behavioral of entity mux_5bits [mux_5bits_default]
+Compiling architecture behavioral of entity ff_1bit [ff_1bit_default]
+Compiling architecture behavioral of entity ff_5bit [ff_5bit_default]
+Compiling architecture behavioral of entity ff_32bit [ff_32bit_default]
+Compiling architecture behavioral of entity mips
+Time Resolution for simulation is 1ps.
+Waiting for 6 sub-compilation(s) to finish...
+WARNING:Simulator - Unable to copy libPortabilityNOSH.dll to the simulation executable directory: boost::filesystem::copy_file: The system cannot find the path specified, "isim\MIPS_isim_beh.exe.sim\libPortability.dll".
+Compiled 38 VHDL Units
+Built simulation executable C:/Users/amrit/Documents/GitHub/ACHD_PROJECT/NYU_6463_Processor/MIPS_isim_beh.exe
+Fuse Memory Usage: 38812 KB
+Fuse CPU Usage: 889 ms
